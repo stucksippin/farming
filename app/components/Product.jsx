@@ -129,20 +129,12 @@ export default function Product() {
 
         <h2 className='text-white text-center text-[68px] mb-[200px] font-extrabold product_main_title'>О ПРОДУКТЕ</h2>
 
-        <div className='flex items-center justify-end pr-[5%] mb-10 product_block_wheat'>
-          <span className='text-[64px] text-white mr-5 '>ПШЕНИЦА</span>
-          <Image className='title_logo' src={logo_wheat} width={90} height={90} alt='wheat' />
+        <div className='flex items-center justify-start pr-[5%] mb-10 product_block_wheat'>
+          <span className='text-[72px] text-[#F7C35F] mr-5 '>ПШЕНИЦА</span>
+          <Image className='title_logo' src={logo_wheat} width={70} height={70} alt='wheat' />
         </div>
 
-        <ul className='flex justify-around product_items '>
-          {products.map((product, index) => (
-            <li className='flex-col bg-[#6D8C54] w-[300px] h-[300px] rounded-[40px] items-center flex product_block' key={index}>
-              <Image className='mt-10 mb-2 product_image' alt={product.name} width={100} height={100} src={product.image} />
-              <p className='text-[28px] text-[#263C28] font-extrabold product_name'>{product.name}</p>
-              <p className='text-[68px] product_title text-[#263C28]'>{product.percentage}</p>
-            </li>
-          ))}
-        </ul>
+
 
 
         <div className='flex justify-center mt-[5%] '>
@@ -154,7 +146,11 @@ export default function Product() {
           </Modal>
         </div>
       </div>
-      {/* лен */}
+
+
+
+
+      {/* ЛЕН */}
 
       <div className=' pb-[5%] pt-[5%]'>
         <div className='flex items-center justify-start pl-[5%] mb-10 product_block_flax'>
