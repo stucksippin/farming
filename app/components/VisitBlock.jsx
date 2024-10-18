@@ -3,15 +3,17 @@ import React from 'react'
 import wheat from '../assets/visit-wheat.png'
 export default function VisitBlock() {
     return (
-        <div className='flex justify-between'>
-            <div className='flex flex-col ml-[85px]'>
-                <h1 className='text-[128px] text-[#F7C35F] font-bold'>Предлагаем <br />пшеницу и<br /> лен</h1>
-                <span className='text-[52px] text-[#EADCC1] font-bold'>От фермерского хозяйства</span>
-                <button className='text-[38px] bg-[#F7C35F] rounded-[70px] w-fit p-[35px] mt-[50px]'>Оставить запрос</button>
+
+        <div className='farm_container section flex justify-between '>
+            <div className='flex flex-col justify-center'>
+                <h1 className='text-[58px] text-[#F7C35F] font-bold'>Предлагаем <br />пшеницу и<br /> лен</h1>
+                <span className='text-[40px] text-[#EADCC1] font-bold'>От фермерского хозяйства</span>
+                <button className='text-[18px] bg-[#F7C35F] rounded-[15px] w-fit px-[25px] py-[10px] mt-[50px]'><a href="#contact">ОСТАВИТЬ ЗАПРОС</a></button>
             </div>
             <div>
-                <Image src={wheat} width={1038} height={848} alt='wheat' />
+                <Image src={wheat} width={730} height={570} alt='wheat' />
             </div>
         </div>
+
     )
 }

@@ -6,7 +6,8 @@ import wheat from '../assets/wheat.png'
 import scales from '../assets/scales.png'
 import logo_wheat from '../assets/logo-wheat.png'
 import logo_flax from '../assets/logo-flex.png'
-import bg_wheat from '../assets/bg-wheat.png'
+import bg_wheat from '../assets/product-wheat.png'
+import ellipse from '../assets/ellipse_underwheat.png'
 
 import Image from 'next/image';
 import { Button, Modal, Table } from 'antd';
@@ -124,22 +125,51 @@ export default function Product() {
 
 
   return (
-    <div className='mt-20 container mx-auto'>
-      <div className='relative mb-[5%]'>
+    <div className='section section_wheat farm_container'>
 
-        <h2 className='text-white text-center text-[68px] mb-[200px] font-extrabold product_main_title'>О ПРОДУКТЕ</h2>
+      <h2 className='title_for-block'>О ПРОДУКТЕ</h2>
 
-        <div className='flex items-center justify-start pr-[5%] mb-10 product_block_wheat'>
-          <span className='text-[72px] text-[#F7C35F] mr-5 '>ПШЕНИЦА</span>
-          <Image className='title_logo' src={logo_wheat} width={70} height={70} alt='wheat' />
+
+
+
+      {/* ПШЕНИЦА */}
+      <div className='block_wheat mb-[15%]'>
+        <div className='flex items-center justify-start pr-[5%]  product_block_wheat'>
+          <span className='text-[48px]  text-[#F7C35F] mr-5 '>ПШЕНИЦА</span>
+          <Image className='title_logo' src={logo_wheat} width={40} height={40} alt='wheat' />
+        </div>
+
+        <div class="container_product-wheat-block relative">
+
+          <div className='wheat-item absolute top-[5%] right-[35%] z-[1]'>
+            <Image src={bg_wheat} width={600} height={700} unoptimized />
+          </div>
+          <div className='wheat-item absolute top-[5%] right-[32%] z-[-1]'>
+            <Image src={ellipse} width={700} height={602} unoptimized />
+          </div>
+
+          <div class="protein product_params-wheat">
+            <span className='product_params-wheat-name '>ПРОТЕИН</span>
+            <span className='product_params-wheat-per'>14%</span>
+          </div>
+          <div class="kl product_params-wheat">
+            <span className='product_params-wheat-name '>КЛЕЙКОВИНА</span>
+            <span className='product_params-wheat-per'>22%</span>
+          </div>
+          <div class="weight product_params-wheat">
+            <span className='product_params-wheat-name '>НАТУРНЫЙ ВЕС</span>
+            <span className='product_params-wheat-per'>11%</span>
+          </div>
+          <div class="vlaga product_params-wheat">
+            <span className='product_params-wheat-name '>ВЛАЖНОСТЬ</span>
+            <span className='product_params-wheat-per'>20%</span>
+          </div>
         </div>
 
 
-
-
-        <div className='flex justify-center mt-[5%] '>
-          <Button className='bg-[#263C28]  text-center text-[36px] p-10 rounded-[25px] flex  text-[#6D8C54] border-[#6D8C54]  product_button' type="primary" onClick={showModal}>
-            ПОДРОБНЕЕ
+        <div className='flex justify-center mt-[10%] z-[3]'>
+          <Button className='button' type="primary" onClick={showModal}>
+            Подробнее
           </Button>
           <Modal title="Подробные данные" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
             <Table size='large' pagination={false} dataSource={dataSource} columns={columns} />;
@@ -151,27 +181,26 @@ export default function Product() {
 
 
       {/* ЛЕН */}
-
-      <div className=' pb-[5%] pt-[5%]'>
-        <div className='flex items-center justify-start pl-[5%] mb-10 product_block_flax'>
-          <span className='text-[64px] text-white mr-5 '>ЛЕН</span>
-          <Image className='title_logo' src={logo_flax} width={90} height={90} alt='wheat' />
+      <div className='flax_block mt-[5%]'>
+        <div className='flex items-center justify-start mb-[100px]'>
+          <span className='text-[48px] text-[#F7C35F] mr-5 '>ЛЕН</span>
+          <Image className='title_logo' src={logo_flax} width={40} height={40} alt='wheat' />
         </div>
 
-        <ul className='flex justify-around product_items '>
+        <ul className='flex justify-around product_params-len '>
           {products.map((product, index) => (
-            <li className='flex-col bg-[#F7C35F] w-[300px] h-[300px] rounded-[40px] items-center flex product_block' key={index}>
-              <Image className='mt-10 mb-2 product_image' alt={product.name} width={100} height={100} src={product.image} />
-              <p className='text-[28px] text-[#635438] font-extrabold product_name'>{product.name}</p>
-              <p className='text-[70px] product_title text-[#635438]'>{product.percentage}</p>
-            </li>
+            <div className='flax_block-item' key={index}>
+              <Image className='mt-10 mb-5' alt={product.name} width={80} height={80} src={product.image} />
+              <p className='text-[24px] text-[#EADCC1] font-extrabold'>{product.name}</p>
+              <p className='text-[36px] text-[#F7C35F] '>{product.percentage}</p>
+            </div>
           ))}
         </ul>
 
 
         <div className='flex justify-center mt-[5%] '>
-          <Button className='bg-[#F7C35F]  text-center text-[36px] p-10 rounded-[25px] flex  text-[#4B3D2B] border-[#4B3D2B]  product_button' type="primary" onClick={showModal}>
-            ПОДРОБНЕЕ
+          <Button className='button' type="primary" onClick={showModal}>
+            Подробнее
           </Button>
           <Modal title="Подробные данные" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
             <Table pagination={false} dataSource={dataSource} columns={columns} style={{

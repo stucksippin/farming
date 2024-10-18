@@ -28,33 +28,35 @@ export default function Contact() {
     console.log(errors);
 
     return (
-        <div className='bg-[#263C28] pt-[5%] pb-[5%]  '>
-            <h3 id='contact' className='text-white text-center text-[68px] mb-[10%] font-extrabold product_main_title'>КОНТАКТЫ</h3>
-            <div className='flex justify-around items-center'>
 
-                <div>
+        <div className='bg-[#263C28] pt-[10%] pb-[10%]  '>
+            <h3 id='contact' className='title_for-block'>КОНТАКТЫ</h3>
+            <div className='block_contact flex justify-around items-center'>
+
+                <div className='block_contact-info'>
                     <div className='mb-[10%] flex flex-col'>
-                        <span className='text-[#F7C35F] text-[36px] mb-[15px] contact_label-text'>Номер</span>
-                        <span className='text-[40px] text-white contact_mean-text'>+7 928 178-92-82</span>
+                        <span className='title_block_contact'>НОМЕР</span>
+                        <span className='text_block_contact'>+7 928 178-92-82</span>
+                        <span className='text_block_contact'>+7 928 617-38-25</span>
                     </div>
                     <div className='mb-[10%] flex flex-col'>
-                        <span className='text-[#F7C35F] text-[36px] mb-[15px] contact_label-text'>Почта</span>
-                        <span className='text-[40px] text-white contact_mean-text'>example@mail.ru</span>
+                        <span className='title_block_contact '>ПОЧТА</span>
+                        <span className='text_block_contact'>example@mail.ru</span>
                     </div>
                     <div className='mb-[10%] flex flex-col'>
-                        <span className='text-[#F7C35F] text-[36px] mb-[15px] contact_label-text'>Адрес</span>
-                        <span className='text-[40px] text-white contact_mean-text'>Ростовская обл,<br /> хут.Новоросоошанский</span>
+                        <span className='title_block_contact '>АДРЕС</span>
+                        <span className='text_block_contact '>Ростовская обл,<br /> хут.Новоросоошанский</span>
+                        <button className='bg-[#EADCC1] mt-3 w-fit px-3 py-1 rounded-lg' ><a target="_blank" href="https://www.google.ru/maps/place/Новороссошанский,+Ростовская+обл.,+347083/@47.9274054,41.3123091,14.5z/data=!4m6!3m5!1s0x411da1c1e70c203d:0x48a368bd20fadacc!8m2!3d47.9071682!4d41.3607586!16s%2Fg%2F1236yr98?entry=ttu&g_ep=EgoyMDI0MDkxMC4wIKXMDSoASAFQAw%3D%3D">Показать на карте</a></button>
                     </div>
                 </div>
 
-                <div className='bg-[#334B35]/[0.5] w-[805px] h-[675px] p-10 rounded-[57px] callback_form'>
-                    <h4 className='text-center text-[40px] text-white font-extrabold mb-10 contact_title'>Оставьте ваши контакты</h4>
+                <div className='block_contact-form'>
                     <form className='flex flex-col items-center' onSubmit={handleSubmit(onSubmit)}>
-                        <input className='mb-[50px] w-1/2 p-4 rounded-xl bg-[#263C28] text-white  form_input' type="text" placeholder="Ваше имя" {...register("firstName", { required: true, maxLength: 80 })} />
-                        <input className='mb-[50px] w-1/2 p-4 rounded-xl bg-[#263C28] text-white  form_input' type="tel" placeholder="Номер телефона" {...register("mobileNumber", { required: true, minLength: 6, maxLength: 12 })} />
-                        <input className='mb-[50px] w-1/2 p-4 h-[150px] rounded-xl bg-[#263C28] text-white form_input' type="more" placeholder="Дополнительная информация" {...register("more", { required: false, minLength: 5, maxLength: 300 })} />
+                        <input className='contact-form-input ' type="text" placeholder="Ваше имя" {...register("firstName", { required: true, maxLength: 80 })} />
+                        <input className='contact-form-input' type="tel" placeholder="Номер телефона" {...register("mobileNumber", { required: true, minLength: 6, maxLength: 12 })} />
+                        <input className='contact-form-input' type="more" placeholder="Дополнительная информация" {...register("more", { required: false, minLength: 5, maxLength: 300 })} />
 
-                        <input className='px-10 py-4 bg-[#F7C35F] font-extrabold form_button rounded-xl' type="submit" />
+                        <input className='px-10 py-4 bg-[#F7C35F] font-bold form_button rounded-xl' type="submit" />
                     </form>
                 </div>
 
