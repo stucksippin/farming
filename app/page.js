@@ -6,7 +6,7 @@ import VisitBlock from "./components/VisitBlock";
 
 export default function MainPage() {
   return (
-    <div className="">
+    <div className="mx-auto">
       <Header />
       <VisitBlock />
       <Product />
