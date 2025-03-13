@@ -27,8 +27,9 @@ body {
     ". . . . . . .";
 }
 
+
 .section {
-  margin-top: 5%;
+  margin-top: 15%;
 }
 
 .section_wheat {
@@ -143,11 +144,277 @@ html {
 
 }
 
+.custom-table {
+  width: 100%;
+  font-size: 16px;
+}
+
 /* adaptive */
-@media screen and (max-width: 768px) {}
-
-@media screen and (max-width: 1024px) {}
-
-@media screen and (max-width: 1440px) {}
 
 @media screen and (max-width: 1920px) {}
+
+@media screen and (max-width: 1440px) {
+  .wheat-img {
+    width: 500px;
+  }
+
+  .blur-img {
+    width: 600px;
+  }
+
+  .wheat-item {
+    top: 2%;
+    right: 31%;
+  }
+
+  .blur-item {
+    top: 2%;
+    right: 25%;
+  }
+
+}
+
+@media screen and (max-width: 1024px) {
+  .wheat-img {
+    width: 350px;
+  }
+
+  .blur-img {
+    width: 400px;
+  }
+
+  .wheat-item {
+    top: 20%;
+    right: 30%;
+  }
+
+  .blur-item {
+    top: 20%;
+    right: 26%;
+  }
+
+  .visit_title {
+    font-size: 38px;
+  }
+
+  .visit_subtitle {
+    font-size: 24px;
+  }
+
+  .product_params-len {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .flax_block-item {
+    width: 200px;
+    height: 250px;
+
+  }
+
+  .flax_product-name {
+    font-size: 18px;
+  }
+
+  .flax_product-percentage {
+    font-size: 32px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wheat-img {
+    width: 350px;
+  }
+
+  .blur-img {
+    width: 400px;
+  }
+
+  .wheat-item {
+    top: 20%;
+    right: 26%;
+  }
+
+  .blur-item {
+    top: 20%;
+    right: 22%;
+  }
+
+  .visit_title {
+    font-size: 38px;
+  }
+
+  .visit_subtitle {
+    font-size: 24px;
+  }
+
+  .product_params-len {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .contact-form-input {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .wheat-img {
+    width: 220px;
+  }
+
+  .blur-img {
+    width: 300px;
+  }
+
+  .wheat-item {
+    top: 28%;
+    right: 24%;
+  }
+
+  .blur-item {
+    top: 20%;
+    right: 12%;
+  }
+
+  .visit_title {
+    font-size: 32px;
+  }
+
+  .visit_subtitle {
+    font-size: 16px;
+  }
+
+  .product_params-len {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .contact-form-input {
+    width: 150px;
+    height: 40px;
+    font-size: 12px;
+    padding: 5px;
+
+  }
+
+  .visit-wheat-img {
+    width: 190px;
+  }
+
+  .header_title {
+    font-size: 16px;
+  }
+
+  .header_number {
+    font-size: 16px;
+  }
+
+  .visit_button {
+    font-size: 10px;
+    margin-top: 15px;
+  }
+
+  .title_for-block {
+    font-size: 30px;
+    margin-bottom: 5%;
+
+  }
+
+  .wheat_h {
+    font-size: 26px;
+    margin-right: 4px;
+  }
+
+  .title_logo {
+    width: 20px;
+  }
+
+  .product_params-wheat {
+    width: 120px;
+    height: 80px;
+    background: rgba(38, 60, 40, 0.3);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .product_params-wheat-name {
+    font-size: 14px;
+    color: #EADCC1;
+  }
+
+  .product_params-wheat-per {
+    font-size: 16px;
+    color: #F7C35F;
+    font-weight: 700;
+  }
+
+  .product_params-len {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .flax_block-item {
+    width: 150px;
+    height: 200px;
+    margin-bottom: 10px;
+  }
+
+  .flax-img {
+    width: 40px;
+  }
+
+  .flax_product-name {
+    font-size: 14px;
+  }
+
+  .flax_title {
+    margin-bottom: 50px;
+  }
+
+  .flax_product-percentage {
+    font-size: 24px;
+  }
+
+  .title_block_contact {
+    font-size: 12px;
+  }
+
+  .text_block_contact {
+    font-size: 14px;
+  }
+
+  .ant-modal {
+    max-width: 90%;
+  }
+
+  .ant-table {
+    font-size: 10px !important;
+  }
+
+  .product_h {
+    font-size: 28px;
+  }
+
+  .form_button {
+    font-size: 12px;
+    padding: 10px 15px;
+  }
+
+  .button {
+    padding: 18px 30px;
+    margin-top: 15px;
+    font-size: 14px;
+  }
+
+  .info_button {
+    margin-top: 50px;
+  }
+
+}

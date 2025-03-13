@@ -1,53 +1,87 @@
 'use client'
-import React, { useState } from 'react'
-import drop from '../assets/drop.png'
-import protein from '../assets/protein.png'
-import wheat from '../assets/wheat.png'
-import scales from '../assets/scales.png'
-import logo_wheat from '../assets/logo-wheat.png'
-import logo_flax from '../assets/logo-flex.png'
-import bg_wheat from '../assets/product-wheat.png'
-import ellipse from '../assets/ellipse_underwheat.png'
-
+import React, { useEffect, useState } from 'react';
+import drop from '../assets/drop.png';
+import protein from '../assets/protein.png';
+import wheat from '../assets/wheat.png';
+import scales from '../assets/scales.png';
+import logo_wheat from '../assets/logo-wheat.png';
+import logo_flax from '../assets/logo-flex.png';
+import bg_wheat from '../assets/product-wheat.png';
+import ellipse from '../assets/ellipse_underwheat.png';
 import Image from 'next/image';
 import { Button, Modal, Table } from 'antd';
 
-
-
 export default function Product() {
-
+  // Состояния для модалок
+  const [isWheatModalOpen, setIsWheatModalOpen] = useState(false);
+  const [isFlaxModalOpen, setIsFlaxModalOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const showModal = () => {
-    setIsModalOpen(true);
+  const [modalWidth, setModalWidth] = useState(800);
+  const [columns, setColumns] = useState([
+    {
+      title: 'Параметр',
+      dataIndex: 'name',
+      key: 'name',
+      width: 200,
+    },
+    {
+      title: 'Единица измерения',
+      dataIndex: 'ed',
+      key: 'ed',
+      width: 300,
+    },
+    {
+      title: 'Значение',
+      dataIndex: 'meaning',
+      key: 'meaning',
+      width: 300,
+    },
+  ]);
+  // пшеница
+  const showWheatModal = () => {
+    setIsWheatModalOpen(true);
   };
-  const handleOk = () => {
-    setIsModalOpen(false);
+  const handleWheatOk = () => {
+    setIsWheatModalOpen(false);
   };
-  const handleCancel = () => {
-    setIsModalOpen(false);
+  const handleWheatCancel = () => {
+    setIsWheatModalOpen(false);
   };
-  const products = [
+
+  // лен
+  const showFlaxModal = () => {
+    setIsFlaxModalOpen(true);
+  };
+  const handleFlaxOk = () => {
+    setIsFlaxModalOpen(false);
+  };
+  const handleFlaxCancel = () => {
+    setIsFlaxModalOpen(false);
+  };
+
+  const productsOfFlex = [
     {
       name: "ПРОТЕИН",
       percentage: "14%",
-      image: protein
+      image: protein,
     },
     {
       name: "КЛЕЙКОВИНА",
       percentage: "21.6%",
-      image: wheat
+      image: wheat,
     },
     {
       name: "НАТУРНЫЙ ВЕС",
       percentage: "82.2",
-      image: scales
+      image: scales,
     },
     {
       name: "ВЛАЖНОСТЬ",
       percentage: "12.6%",
-      image: drop
-    }
+      image: drop,
+    },
   ];
+
   const dataSource = [
     {
       key: '1',
@@ -97,122 +131,144 @@ export default function Product() {
       ed: '%',
       meaning: '12.8',
     },
-
-  ];
-  const columns = [
-    {
-      title: 'Параметр',
-      dataIndex: 'name',
-      key: 'name',
-
-      width: '40%',
-    },
-    {
-      title: 'Единица измерения',
-      dataIndex: 'ed',
-      key: 'ed',
-
-      width: '40%',
-    },
-    {
-      title: 'Значение',
-      dataIndex: 'meaning',
-      key: 'meaning',
-
-      width: '40%',
-    }
   ];
 
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setModalWidth('90%');
+        setColumns([
+          {
+            title: 'Параметр',
+            dataIndex: 'name',
+            key: 'name',
+            width: 150,
+          },
+          {
+            title: 'Значение',
+            dataIndex: 'meaning',
+            key: 'meaning',
+            width: 150,
+          },
+        ]);
+      } else {
+        setModalWidth(800);
+        setColumns([
+          {
+            title: 'Параметр',
+            dataIndex: 'name',
+            key: 'name',
+            width: 200,
+          },
+          {
+            title: 'Единица измерения',
+            dataIndex: 'ed',
+            key: 'ed',
+            width: 300,
+          },
+          {
+            title: 'Значение',
+            dataIndex: 'meaning',
+            key: 'meaning',
+            width: 300,
+          },
+        ]);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    handleResize();
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   return (
     <div className='section section_wheat farm_container'>
-
       <h2 className='title_for-block'>О ПРОДУКТЕ</h2>
-
-
-
 
       {/* ПШЕНИЦА */}
       <div className='block_wheat mb-[15%]'>
-        <div className='flex items-center justify-start pr-[5%]  product_block_wheat'>
-          <span className='text-[48px]  text-[#F7C35F] mr-5 '>ПШЕНИЦА</span>
+        <div className='wheat_title flex items-center justify-start pr-[5%] product_block_wheat'>
+          <h1 className='product_h text-[48px] text-[#F7C35F] mr-5'>ПШЕНИЦА</h1>
           <Image className='title_logo' src={logo_wheat} width={40} height={40} alt='wheat' />
         </div>
 
-        <div class="container_product-wheat-block relative">
-
-          <div className='wheat-item absolute top-[5%] right-[35%] z-[1]'>
-            <Image src={bg_wheat} width={600} height={700} unoptimized />
+        <div className='container_product-wheat-block relative'>
+          <div className='wheat-item absolute top-[5%] right-[30%] z-[1]'>
+            <Image className='wheat-img' src={bg_wheat} width={600} height={700} alt='stick of wheat' unoptimized />
           </div>
-          <div className='wheat-item absolute top-[5%] right-[32%] z-[-1]'>
-            <Image src={ellipse} width={700} height={602} unoptimized />
+          <div className='blur-item absolute top-[5%] right-[25%] z-[-1]'>
+            <Image className='blur-img' src={ellipse} width={700} height={602} alt='blur background' unoptimized />
           </div>
 
-          <div class="protein product_params-wheat">
-            <span className='product_params-wheat-name '>ПРОТЕИН</span>
+          <div className='protein product_params-wheat'>
+            <span className='product_params-wheat-name'>ПРОТЕИН</span>
             <span className='product_params-wheat-per'>14%</span>
           </div>
-          <div class="kl product_params-wheat">
-            <span className='product_params-wheat-name '>КЛЕЙКОВИНА</span>
+          <div className='kl product_params-wheat'>
+            <span className='product_params-wheat-name'>КЛЕЙКОВИНА</span>
             <span className='product_params-wheat-per'>22%</span>
           </div>
-          <div class="weight product_params-wheat">
-            <span className='product_params-wheat-name '>НАТУРНЫЙ ВЕС</span>
+          <div className='weight product_params-wheat'>
+            <span className='product_params-wheat-name'>НАТУРНЫЙ ВЕС</span>
             <span className='product_params-wheat-per'>11%</span>
           </div>
-          <div class="vlaga product_params-wheat">
-            <span className='product_params-wheat-name '>ВЛАЖНОСТЬ</span>
+          <div className='vlaga product_params-wheat'>
+            <span className='product_params-wheat-name'>ВЛАЖНОСТЬ</span>
             <span className='product_params-wheat-per'>20%</span>
           </div>
         </div>
 
-
         <div className='flex justify-center mt-[10%] z-[3]'>
-          <Button className='button' type="primary" onClick={showModal}>
+          <Button className='button' type='primary' onClick={showWheatModal}>
             Подробнее
           </Button>
-          <Modal title="Подробные данные" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
-            <Table size='large' pagination={false} dataSource={dataSource} columns={columns} />;
+          <Modal
+            className='ant-modal'
+            title='Подробные данные (Пшеница)'
+            open={isWheatModalOpen}
+            onOk={handleWheatOk}
+            onCancel={handleWheatCancel}
+            width={750}
+          >
+            <Table className='ant-table' pagination={false} dataSource={dataSource} columns={columns} />
           </Modal>
         </div>
       </div>
 
-
-
-
       {/* ЛЕН */}
       <div className='flax_block mt-[5%]'>
-        <div className='flex items-center justify-start mb-[100px]'>
-          <span className='text-[48px] text-[#F7C35F] mr-5 '>ЛЕН</span>
+        <div className='flax_title flex items-center justify-start mb-[100px]'>
+          <h2 className='product_h text-[48px] text-[#F7C35F] mr-5'>ЛЕН</h2>
           <Image className='title_logo' src={logo_flax} width={40} height={40} alt='wheat' />
         </div>
 
-        <ul className='flex justify-around product_params-len '>
-          {products.map((product, index) => (
+        <ul className='flex justify-around product_params-len'>
+          {productsOfFlex.map((product, index) => (
             <div className='flax_block-item' key={index}>
-              <Image className='mt-10 mb-5' alt={product.name} width={80} height={80} src={product.image} />
-              <p className='text-[24px] text-[#EADCC1] font-extrabold'>{product.name}</p>
-              <p className='text-[36px] text-[#F7C35F] '>{product.percentage}</p>
+              <Image className='flax-img mt-10 mb-5' alt={product.name} width={80} height={80} src={product.image} />
+              <p className='flax_product-name text-[24px] text-[#EADCC1] font-extrabold'>{product.name}</p>
+              <p className='flax_product-percentage text-[36px] text-[#F7C35F]'>{product.percentage}</p>
             </div>
           ))}
         </ul>
 
-
-        <div className='flex justify-center mt-[5%] '>
-          <Button className='button' type="primary" onClick={showModal}>
+        <div className='flex justify-center mt-[5%]'>
+          <Button className='button' type='primary' onClick={showFlaxModal}>
             Подробнее
           </Button>
-          <Modal title="Подробные данные" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
-            <Table pagination={false} dataSource={dataSource} columns={columns} style={{
-              marginBottom: "10px",
-              fontSize: "26px"
-            }} />;
+          <Modal
+            className='ant-modal'
+            title='Подробные данные (Лен)'
+            open={isFlaxModalOpen}
+            onOk={handleFlaxOk}
+            onCancel={handleFlaxCancel}
+            width={750}
+          >
+            <Table className='ant-table' pagination={false} dataSource={dataSource} columns={columns} />
           </Modal>
         </div>
       </div>
     </div>
-
-
-
-  )
+  );
 }
