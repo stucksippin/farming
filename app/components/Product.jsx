@@ -82,30 +82,30 @@ export default function Product() {
     },
   ];
 
-  const dataSource = [
+  const productOfWheat = [
     {
       key: '1',
       name: 'Влажность',
       ed: '%',
-      meaning: '12.6',
+      meaning: '10.2',
     },
     {
       key: '2',
       name: 'Натурный вес',
       ed: 'Гл/л',
-      meaning: '82.2',
+      meaning: '82.9',
     },
     {
       key: '3',
       name: 'Поврежденные клопом-Черепашкой',
       ed: '%',
-      meaning: '1.77',
+      meaning: '2',
     },
     {
       key: '4',
       name: 'Зерновая примесь',
       ed: '%',
-      meaning: '3.3',
+      meaning: '4',
     },
     {
       key: '5',
@@ -117,7 +117,7 @@ export default function Product() {
       key: '6',
       name: 'Клейковина по ГОСТ',
       ed: '%',
-      meaning: '21.6',
+      meaning: '20',
     },
     {
       key: '7',
@@ -129,58 +129,17 @@ export default function Product() {
       key: '8',
       name: 'Протеин',
       ed: '%',
-      meaning: '12.8',
+      meaning: '11.8',
+
+    }, {
+      key: '9',
+      name: 'Число падений',
+      ed: '%',
+      meaning: '287',
+
     },
   ];
 
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth < 768) {
-        setModalWidth('90%');
-        setColumns([
-          {
-            title: 'Параметр',
-            dataIndex: 'name',
-            key: 'name',
-            width: 150,
-          },
-          {
-            title: 'Значение',
-            dataIndex: 'meaning',
-            key: 'meaning',
-            width: 150,
-          },
-        ]);
-      } else {
-        setModalWidth(800);
-        setColumns([
-          {
-            title: 'Параметр',
-            dataIndex: 'name',
-            key: 'name',
-            width: 200,
-          },
-          {
-            title: 'Единица измерения',
-            dataIndex: 'ed',
-            key: 'ed',
-            width: 300,
-          },
-          {
-            title: 'Значение',
-            dataIndex: 'meaning',
-            key: 'meaning',
-            width: 300,
-          },
-        ]);
-      }
-    };
-
-    window.addEventListener('resize', handleResize);
-    handleResize();
-
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
 
   return (
     <div className='section section_wheat farm_container'>
@@ -203,19 +162,19 @@ export default function Product() {
 
           <div className='protein product_params-wheat'>
             <span className='product_params-wheat-name'>ПРОТЕИН</span>
-            <span className='product_params-wheat-per'>14%</span>
+            <span className='product_params-wheat-per'>11.8%</span>
           </div>
           <div className='kl product_params-wheat'>
             <span className='product_params-wheat-name'>КЛЕЙКОВИНА</span>
-            <span className='product_params-wheat-per'>22%</span>
+            <span className='product_params-wheat-per'>20%</span>
           </div>
           <div className='weight product_params-wheat'>
             <span className='product_params-wheat-name'>НАТУРНЫЙ ВЕС</span>
-            <span className='product_params-wheat-per'>11%</span>
+            <span className='product_params-wheat-per'>82.9</span>
           </div>
           <div className='vlaga product_params-wheat'>
             <span className='product_params-wheat-name'>ВЛАЖНОСТЬ</span>
-            <span className='product_params-wheat-per'>20%</span>
+            <span className='product_params-wheat-per'>10.2%</span>
           </div>
         </div>
 
@@ -231,13 +190,13 @@ export default function Product() {
             onCancel={handleWheatCancel}
             width={750}
           >
-            <Table className='ant-table' pagination={false} dataSource={dataSource} columns={columns} />
+            <Table className='ant-table' pagination={false} dataSource={productOfWheat} columns={columns} />
           </Modal>
         </div>
       </div>
 
       {/* ЛЕН */}
-      <div className='flax_block mt-[5%]'>
+      {/* <div className='flax_block mt-[5%]'>
         <div className='flax_title flex items-center justify-start  mb-[10%]'>
           <h2 className='product_h text-[36px] text-[#F7C35F] mr-5'>ЛЕН</h2>
           <Image className='title_logo' src={logo_flax} width={40} height={40} alt='wheat' />
@@ -265,10 +224,10 @@ export default function Product() {
             onCancel={handleFlaxCancel}
             width={750}
           >
-            <Table className='ant-table' pagination={false} dataSource={dataSource} columns={columns} />
+            <Table className='ant-table' pagination={false} dataSource={productsOfFlex} columns={columns} />
           </Modal>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

@@ -37,11 +37,10 @@ export default function Contact() {
                     <div className='mb-[10%] flex flex-col'>
                         <span className='title_block_contact'>НОМЕР</span>
                         <span className='text_block_contact'>+7 928 178-92-82</span>
-                        <span className='text_block_contact'>+7 928 617-38-25</span>
                     </div>
                     <div className='mb-[10%] flex flex-col'>
                         <span className='title_block_contact '>ПОЧТА</span>
-                        <span className='text_block_contact'>example@mail.ru</span>
+                        <span className='text_block_contact'>velikanov_n@mail.ru</span>
                     </div>
                     <div className='mb-[10%] flex flex-col'>
                         <span className='title_block_contact '>АДРЕС</span>
