@@ -51,6 +51,7 @@ export default function Contact() {
                 </div>
 
                 <div className='block_contact-form'>
+                    <h3 className='callback_title title_for-block invisible '>ОБРАТНАЯ СВЯЗЬ</h3>
                     <form className='contact_form flex flex-col items-center ' onSubmit={handleSubmit(onSubmit)}>
                         <input className='contact-form-input ' type="text" placeholder="Ваше имя" {...register("firstName", { required: true, maxLength: 80 })} />
                         <input className='contact-form-input' type="tel" placeholder="Номер телефона" {...register("mobileNumber", { required: true, minLength: 6, maxLength: 12 })} />

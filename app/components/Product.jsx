@@ -253,7 +253,7 @@ export default function Product() {
           ))}
         </ul>
 
-        <div className='flex justify-center mt-[5%]'>
+        <div className='flex justify-center mt-[10%]'>
           <Button className='button' type='primary' onClick={showFlaxModal}>
             Подробнее
           </Button>

@@ -262,6 +262,12 @@ html {
 }
 
 @media screen and (max-width: 425px) {
+
+  .block_contact {
+    display: flex;
+    flex-direction: column;
+  }
+
   .wheat-img {
     width: 220px;
   }
@@ -281,11 +287,15 @@ html {
   }
 
   .visit_title {
-    font-size: 32px;
+    font-size: 24px;
   }
 
   .visit_subtitle {
     font-size: 16px;
+  }
+
+  .visit_button {
+    padding: 5px 10px;
   }
 
   .product_params-len {
@@ -295,10 +305,10 @@ html {
   }
 
   .contact-form-input {
-    width: 150px;
+    width: 280px;
     height: 40px;
     font-size: 12px;
-    padding: 5px;
+    padding: 10px;
 
   }
 
@@ -307,11 +317,11 @@ html {
   }
 
   .header_title {
-    font-size: 16px;
+    font-size: 12px;
   }
 
   .header_number {
-    font-size: 16px;
+    font-size: 12px;
   }
 
   .visit_button {
@@ -320,13 +330,13 @@ html {
   }
 
   .title_for-block {
-    font-size: 30px;
+    font-size: 24px;
     margin-bottom: 5%;
 
   }
 
-  .wheat_h {
-    font-size: 26px;
+  .product_h {
+    font-size: 4px;
     margin-right: 4px;
   }
 
@@ -363,7 +373,7 @@ html {
 
   .flax_block-item {
     width: 150px;
-    height: 200px;
+    height: 180px;
     margin-bottom: 10px;
   }
 
@@ -388,7 +398,7 @@ html {
   }
 
   .text_block_contact {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .ant-modal {
@@ -400,12 +410,12 @@ html {
   }
 
   .product_h {
-    font-size: 28px;
+    font-size: 20px;
   }
 
   .form_button {
     font-size: 12px;
-    padding: 10px 15px;
+    padding: 10px 35px;
   }
 
   .button {
@@ -414,8 +424,43 @@ html {
     font-size: 14px;
   }
 
-  .info_button {
-    margin-top: 50px;
+  .callback_title {
+    visibility: visible;
+    margin-top: 30px;
   }
+}
+
+@media screen and (max-width: 375px) {
+  .wheat-img {
+    width: 220px;
+  }
+
+  .blur-img {
+    width: 300px;
+  }
+
+  .wheat-item {
+    top: 28%;
+    right: 20%;
+  }
+
+  .blur-item {
+    top: 20%;
+    right: 8%;
+  }
+
+  .visit_title {
+    font-size: 24px;
+  }
+
+  .visit_subtitle {
+    font-size: 16px;
+  }
+
+  .visit_button {
+    padding: 5px 10px;
+  }
+
+
 
 }
