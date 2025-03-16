@@ -184,21 +184,21 @@ export default function Product() {
 
   return (
     <div className='section section_wheat farm_container'>
-      <h2 className='title_for-block'>О ПРОДУКТЕ</h2>
+      <h2 className='title_for-block '>О ПРОДУКТЕ</h2>
 
       {/* ПШЕНИЦА */}
       <div className='block_wheat mb-[15%]'>
         <div className='wheat_title flex items-center justify-start pr-[5%] product_block_wheat'>
-          <h1 className='product_h text-[48px] text-[#F7C35F] mr-5'>ПШЕНИЦА</h1>
+          <h1 className='product_h text-[36px] text-[#F7C35F] mr-5'>ПШЕНИЦА</h1>
           <Image className='title_logo' src={logo_wheat} width={40} height={40} alt='wheat' />
         </div>
 
         <div className='container_product-wheat-block relative'>
-          <div className='wheat-item absolute top-[5%] right-[30%] z-[1]'>
-            <Image className='wheat-img' src={bg_wheat} width={600} height={700} alt='stick of wheat' unoptimized />
+          <div className='wheat-item absolute top-[5%] right-[34%] z-[1]'>
+            <Image className='wheat-img' src={bg_wheat} width={500} height={700} alt='stick of wheat' unoptimized />
           </div>
-          <div className='blur-item absolute top-[5%] right-[25%] z-[-1]'>
-            <Image className='blur-img' src={ellipse} width={700} height={602} alt='blur background' unoptimized />
+          <div className='blur-item absolute top-[5%] right-[29%] z-[-1]'>
+            <Image className='blur-img' src={ellipse} width={600} height={602} alt='blur background' unoptimized />
           </div>
 
           <div className='protein product_params-wheat'>
@@ -239,7 +239,7 @@ export default function Product() {
       {/* ЛЕН */}
       <div className='flax_block mt-[5%]'>
         <div className='flax_title flex items-center justify-start mb-[100px]'>
-          <h2 className='product_h text-[48px] text-[#F7C35F] mr-5'>ЛЕН</h2>
+          <h2 className='product_h text-[36px] text-[#F7C35F] mr-5'>ЛЕН</h2>
           <Image className='title_logo' src={logo_flax} width={40} height={40} alt='wheat' />
         </div>
 
@@ -247,7 +247,7 @@ export default function Product() {
           {productsOfFlex.map((product, index) => (
             <div className='flax_block-item' key={index}>
               <Image className='flax-img mt-10 mb-5' alt={product.name} width={80} height={80} src={product.image} />
-              <p className='flax_product-name text-[24px] text-[#EADCC1] font-extrabold'>{product.name}</p>
+              <p className='flax_product-name text-[16px] text-[#EADCC1] font-extrabold'>{product.name}</p>
               <p className='flax_product-percentage text-[36px] text-[#F7C35F]'>{product.percentage}</p>
             </div>
           ))}
