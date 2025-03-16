@@ -261,7 +261,7 @@ html {
   }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 428px) {
 
   .block_contact {
     display: flex;
@@ -386,7 +386,7 @@ html {
   }
 
   .flax_title {
-    margin-bottom: 50px;
+    margin-bottom: 20%;
   }
 
   .flax_product-percentage {

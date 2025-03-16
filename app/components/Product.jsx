@@ -238,7 +238,7 @@ export default function Product() {
 
       {/* ЛЕН */}
       <div className='flax_block mt-[5%]'>
-        <div className='flax_title flex items-center justify-start mb-[100px]'>
+        <div className='flax_title flex items-center justify-start  mb-[10%]'>
           <h2 className='product_h text-[36px] text-[#F7C35F] mr-5'>ЛЕН</h2>
           <Image className='title_logo' src={logo_flax} width={40} height={40} alt='wheat' />
         </div>

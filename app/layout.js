@@ -4,8 +4,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Пшеница Великанов",
-  description: "продажа пшеницы",
+  title: "Великанов",
+  description: "Продажа пшеницы и льна",
 };
 
 export default function RootLayout({ children }) {
