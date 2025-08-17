@@ -4,7 +4,7 @@ import wheat from '../assets/visit-wheat.png'
 export default function VisitBlock() {
     return (
 
-        <div className='farm_container section flex justify-between '>
+        <section className='farm_container section flex justify-between '>
             <div className='flex flex-col justify-center'>
                 <h1 className='visit_title text-[48px] text-[#F7C35F] font-bold'>Предлагаем пшеницу</h1>
                 <span className='visit_subtitle text-[36px] text-[#EADCC1] font-bold'>От фермерского хозяйства</span>
@@ -13,7 +13,7 @@ export default function VisitBlock() {
             <div>
                 <Image className='visit-wheat-img' src={wheat} width={600} height={570} alt='wheat' />
             </div>
-        </div>
+        </section>
 
     )
 }

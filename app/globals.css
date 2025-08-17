@@ -53,6 +53,82 @@ body {
   grid-area: vlaga;
 }
 
+.will-change-transform {
+  will-change: transform;
+}
+
+
+
+.custom-btn {
+  background-color: #F7C35F;
+  color: black !important;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 20px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.custom-btn:hover {
+  background-color: #F7C35F !important;
+  color: #1f1f1f !important;
+}
+
+
+
+
+.custom-modal .ant-modal-content {
+  background-color: #fff4d1;
+  border-radius: 16px;
+}
+
+.custom-table .ant-table {
+  background-color: #fff9db;
+  font-size: 14px;
+}
+
+.custom-table .ant-table-thead>tr>th {
+  background-color: #ffe58f !important;
+  color: #5c3b00;
+  font-weight: 600;
+  text-align: center;
+}
+
+.custom-table .ant-table-tbody>tr>td {
+  text-align: center;
+  padding: 8px;
+  color: #4a3b1a;
+}
+
+
+.product_params-wheat {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.product_params-wheat.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.product_params-wheat:nth-child(1) {
+  transition-delay: 0s;
+}
+
+.product_params-wheat:nth-child(2) {
+  transition-delay: 0.1s;
+}
+
+.product_params-wheat:nth-child(3) {
+  transition-delay: 0.2s;
+}
+
+.product_params-wheat:nth-child(4) {
+  transition-delay: 0.3s;
+}
+
+
 .product_params-wheat {
   width: 200px;
   height: 100px;
@@ -141,7 +217,7 @@ html {
   border-radius: 8px;
   background: #334B35;
   color: white;
-  padding: 0 30px;
+  padding: 5px 20px;
 
 }
 
