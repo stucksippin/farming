@@ -23,6 +23,25 @@ const itemVariants = {
   }),
 };
 
+function WheatParam({ param, index, scrollYProgress }) {
+  const y = useTransform(scrollYProgress, [0, 1], param.range);
+
+  return (
+    <motion.div
+      className={`${param.area} product_params-wheat will-change-transform`}
+      style={{ y }}
+      custom={index}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+      variants={itemVariants}
+    >
+      <span className="product_params-wheat-name">{param.name}</span>
+      <span className="product_params-wheat-per">{param.value}</span>
+    </motion.div>
+  );
+}
+
 export default function Product() {
   // состояния модалок
   const [isWheatModalOpen, setIsWheatModalOpen] = useState(false);
@@ -107,24 +126,10 @@ export default function Product() {
             <Image src={ellipse} width={600} height={602} alt="blur background" unoptimized />
           </motion.div>
 
-          {wheatParams.map((p, i) => {
-            const y = useTransform(scrollYProgress, [0, 1], p.range);
-            return (
-              <motion.div
-                key={p.name}
-                className={`${p.area} product_params-wheat will-change-transform`}
-                style={{ y }}
-                custom={i}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.3 }}
-                variants={itemVariants}
-              >
-                <span className="product_params-wheat-name">{p.name}</span>
-                <span className="product_params-wheat-per">{p.value}</span>
-              </motion.div>
-            );
-          })}
+          {wheatParams.map((p, i) => (
+            <WheatParam key={p.name} param={p} index={i} scrollYProgress={scrollYProgress} />
+          ))}
+
         </div>
 
         <div className="flex justify-center mt-[10%] z-[3]">

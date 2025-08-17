@@ -157,7 +157,7 @@ export default function Contact() {
                 </div>
             </div>
 
-            <div class="w-full h-[500px] rounded-2xl overflow-hidden shadow-lg mt-10 ">
+            <div className="w-full h-[500px] rounded-2xl overflow-hidden shadow-lg mt-10 ">
                 <iframe
                     src="https://yandex.ru/map-widget/v1/?ll=41.3607586%2C47.9071682&z=14&pt=41.3607586,47.9071682,pm2rdm"
                     width="100%"
