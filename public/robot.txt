@@ -1,4 +1,6 @@
 User-agent: *
+Disallow: /node_modules/
+Disallow: /.next/
 Allow: /
 
-Sitemap: https://velikanov-farming.vercel.app/sitemap.xml
+Sitemap: https://velikanov-farming.ru/sitemap.xml
