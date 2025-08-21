@@ -55,7 +55,7 @@ export default function Contact() {
                     <div className="flex flex-col">
                         <span className="title_block_contact">АДРЕС</span>
                         <span className="text_block_contact">
-                            Ростовская обл, <br /> хут. Новоросоошанский
+                            Хутор Новоросоошанский   <br /> Тацинский район  <br />  Ростовская область
                         </span>
                         <a
                             target="_blank"

@@ -6,12 +6,15 @@ export default function VisitBlock() {
 
         <section className='farm_container section flex justify-between '>
             <div className='flex flex-col justify-center'>
-                <h1 className='visit_title text-[48px] text-[#F7C35F] font-bold'>Предлагаем пшеницу</h1>
-                <span className='visit_subtitle text-[36px] text-[#EADCC1] font-bold'>От фермерского хозяйства</span>
-                <button className='visit_button text-[18px] bg-[#F7C35F] rounded-[15px] w-fit px-[25px] py-[10px] mt-[50px]'><a href="#contact">Оставить запрос</a></button>
+                <h1 className='visit_title text-[42px] text-[#F7C35F] font-bold'>
+                    Пшеница и лен оптом от фермерского хозяйства Великанова
+                </h1>
+
+                <span className='visit_subtitle text-[36px] text-[#EADCC1] font-bold'>Ростовская область — напрямую от фермера</span>
+                <button className='visit_button text-[18px] bg-[#F7C35F] rounded-[15px] w-fit px-[25px] py-[10px] mt-[50px]'><a href="#contact">Связаться</a></button>
             </div>
             <div>
-                <Image className='visit-wheat-img' src={wheat} width={600} height={570} alt='wheat' />
+                <Image className='visit-wheat-img' src={wheat} width={600} height={570} alt='Колосья пшеницы, фермерское хозяйство Великанова' />
             </div>
         </section>
 
