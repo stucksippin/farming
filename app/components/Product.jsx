@@ -106,7 +106,7 @@ export default function Product() {
       {/* ---- ПШЕНИЦА ---- */}
       <div className="block_wheat mb-[15%]">
         <div className="wheat_title flex items-center justify-start pr-[5%] product_block_wheat">
-          <h2 className="product_h text-[36px] text-[#F7C35F] mr-5">ПШЕНИЦА</h2>
+          <h2 id='wheat' className="product_h text-[36px] text-[#F7C35F] mr-5">ПШЕНИЦА</h2>
           <Image src={logo_wheat} width={40} height={40} alt="Логотип пшеницы Великанова" />
         </div>
 
@@ -155,7 +155,7 @@ export default function Product() {
       {/* ---- ЛЕН ---- */}
       <div className="flax_block mt-[5%]">
         <div className="flax_title flex items-center justify-start mb-[10%]">
-          <h2 className="product_h text-[36px] text-[#F7C35F] mr-5">ЛЕН</h2>
+          <h2 id='flex' className="product_h text-[36px] text-[#F7C35F] mr-5">ЛЕН</h2>
           <Image src={logo_flax} width={40} height={40} alt="Логотип льна Великанова" />
         </div>
 
