@@ -15,17 +15,16 @@ export const metadata = {
     "фермерское хозяйство Великанова",
     "зерно для мельниц",
   ],
-  other: {
-    ['yandex-verification']: '30dfb6432a27c9c1',
-  },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="ru">
+      <head>
+        <meta name="yandex-verification" content="30dfb6432a27c9c1" />
+      </head>
       <body className={inter.className}>
         {children}
-        {/* Schema.org для фермы */}
         <script type="application/ld+json" dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
