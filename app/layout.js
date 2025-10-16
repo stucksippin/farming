@@ -15,6 +15,9 @@ export const metadata = {
     "фермерское хозяйство Великанова",
     "зерно для мельниц",
   ],
+  other: {
+    ['yandex-verification']: '30dfb6432a27c9c1',
+  },
 };
 
 export default function RootLayout({ children }) {
