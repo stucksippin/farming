@@ -20,9 +20,6 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="ru">
-      <head>
-        <meta name="yandex-verification" content="30dfb6432a27c9c1" />
-      </head>
       <body className={inter.className}>
         {children}
         <script type="application/ld+json" dangerouslySetInnerHTML={{
