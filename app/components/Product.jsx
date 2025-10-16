@@ -169,7 +169,7 @@ export default function Product() {
           ))}
         </ul>
 
-        <div className="flex justify-center mt-[10%]">
+        {/* <div className="flex justify-center mt-[10%]">
           <Button className="button custom-btn" type="primary" onClick={() => setIsFlaxModalOpen(true)}>
             Подробнее о льне
           </Button>
@@ -194,7 +194,7 @@ export default function Product() {
               </div>
             </motion.div>
           </Modal>
-        </div>
+        </div> */}
       </div>
 
       {/* ---- Schema.org JSON-LD ---- */}

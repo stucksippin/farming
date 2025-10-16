@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import wheat from '../assets/visit-wheat.png'
+import Link from 'next/link'
 export default function VisitBlock() {
     return (
 
@@ -11,7 +12,7 @@ export default function VisitBlock() {
                 </h1>
 
                 <span className='visit_subtitle text-[36px] text-[#EADCC1] font-bold'>Ростовская область — напрямую от фермера</span>
-                <button className='visit_button text-[18px] bg-[#F7C35F] rounded-[15px] w-fit px-[25px] py-[10px] mt-[50px]'><a href="#contact">Связаться</a></button>
+                <button className='visit_button text-[18px] bg-[#F7C35F] rounded-[15px] w-fit px-[25px] py-[10px] mt-[50px]'><Link href="#contact">Связаться</Link></button>
             </div>
             <div>
                 <Image className='visit-wheat-img' src={wheat} width={600} height={570} alt='Колосья пшеницы, фермерское хозяйство Великанова' />

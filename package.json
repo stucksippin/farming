@@ -11,6 +11,7 @@
   "dependencies": {
     "antd": "^5.24.3",
     "framer-motion": "^12.23.12",
+    "lucide-react": "^0.545.0",
     "next": "14.2.4",
     "react": "^18",
     "react-dom": "^18",
