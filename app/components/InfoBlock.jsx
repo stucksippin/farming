@@ -218,14 +218,15 @@ export default function InfoBlock() {
                     обращайтесь в фермерское хозяйство Великанова. Гарантируем свежий урожай,
                     проверенное качество и выгодные условия сотрудничества.
                 </p>
-                <motion.button
+                <motion.a
+                    href='#contact'
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="bg-[#F7C35F] text-[#2c1810] px-8 py-4 rounded-lg font-semibold text-lg
             hover:bg-[#e5b44f] transition-colors shadow-lg"
                 >
                     Получить прайс-лист
-                </motion.button>
+                </motion.a>
             </motion.div>
 
             {/* FAQ аккордеон */}
