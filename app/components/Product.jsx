@@ -47,10 +47,10 @@ const flaxColumns = [
 ];
 
 const wheatParams = [
-  { name: 'ПРОТЕИН', value: '11.8%', area: 'protein', range: [-50, 50] },
-  { name: 'КЛЕЙКОВИНА', value: '20%', area: 'kl', range: [-60, 60] },
-  { name: 'НАТУРНЫЙ ВЕС', value: '82.9', area: 'weight', range: [-50, 50] },
-  { name: 'ВЛАЖНОСТЬ', value: '10.2%', area: 'vlaga', range: [-60, 60] },
+  { name: 'ПРОТЕИН', value: '11.8%', area: 'protein', range: [-10, 10] },
+  { name: 'КЛЕЙКОВИНА', value: '20%', area: 'kl', range: [-10, 10] },
+  { name: 'НАТУРНЫЙ ВЕС', value: '82.9', area: 'weight', range: [-10, 10] },
+  { name: 'ВЛАЖНОСТЬ', value: '10.2%', area: 'vlaga', range: [-10, 10] },
 ];
 
 const flaxIcons = [
@@ -62,8 +62,8 @@ const flaxIcons = [
 
 // ---- Анимация карточек ----
 const itemVariants = {
-  hidden: { opacity: 0, y: 50 },
-  visible: (i) => ({ opacity: 1, y: 0, transition: { delay: i * 0.18, duration: 0.6, ease: 'easeOut' } }),
+  hidden: { opacity: 0, y: 10 },
+  visible: (i) => ({ opacity: 1, y: 0, transition: { delay: i * 0.1, duration: 0.1, ease: 'easeOut' } }),
 };
 
 // ---- Компонент параллакса ----
@@ -93,11 +93,11 @@ export default function Product() {
   const wheatContainerRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: wheatContainerRef,
-    offset: ['start 80%', 'end 20%'],
+    offset: ['start 10%', 'end 20%'],
   });
 
-  const yWheat = useTransform(scrollYProgress, [0, 1], [100, -200]);
-  const yBlur = useTransform(scrollYProgress, [0, 1], [120, -120]);
+  const yWheat = useTransform(scrollYProgress, [0, 1], [10, -10]);
+  const yBlur = useTransform(scrollYProgress, [0, 1], [10, -10]);
 
   return (
     <section className="section section_wheat farm_container">

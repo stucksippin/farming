@@ -225,6 +225,8 @@ html {
   font-size: 16px;
 }
 
+
+
 /* adaptive */
 
 @media screen and (max-width: 1920px) {}
@@ -260,13 +262,13 @@ html {
   }
 
   .wheat-item {
-    top: 20%;
-    right: 30%;
+    top: 8%;
+    right: 24%;
   }
 
   .blur-item {
-    top: 20%;
-    right: 26%;
+    top: 8%;
+    right: 18%;
   }
 
   .visit_title {
@@ -300,21 +302,21 @@ html {
 
 @media screen and (max-width: 768px) {
   .wheat-img {
-    width: 350px;
+    width: 150px;
   }
 
   .blur-img {
-    width: 400px;
+    width: 300px;
   }
 
   .wheat-item {
-    top: 20%;
-    right: 26%;
+    top: 10%;
+    right: 15%;
   }
 
   .blur-item {
-    top: 20%;
-    right: 22%;
+    top: 8%;
+    right: 10%;
   }
 
   .visit_title {
@@ -344,7 +346,7 @@ html {
   }
 
   .wheat-img {
-    width: 220px;
+    width: 100px;
   }
 
   .blur-img {
@@ -352,13 +354,13 @@ html {
   }
 
   .wheat-item {
-    top: 28%;
-    right: 24%;
+    top: 8%;
+    right: 10%;
   }
 
   .blur-item {
-    top: 20%;
-    right: 12%;
+    top: 10%;
+    right: 8%;
   }
 
   .visit_title {
@@ -516,8 +518,8 @@ html {
   }
 
   .wheat-item {
-    top: 28%;
-    right: 19%;
+    top: 15%;
+    right: 12%;
   }
 
   .blur-item {
