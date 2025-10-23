@@ -192,11 +192,11 @@ export default function Product() {
           <Image src={logo_flax} width={40} height={40} alt="Логотип льна Великанова" />
         </div>
 
-        <ul className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 product_params-len px-4">
+        <ul className="flex justify-around product_params-len">
           {flaxData.map((product, index) => (
-            <motion.li
+            <motion.div
               key={index}
-              className="flax_block-item flex flex-col items-center will-change-transform"
+              className="flax_block-item will-change-transform"
               custom={index}
               initial="hidden"
               whileInView="visible"
@@ -204,19 +204,19 @@ export default function Product() {
               variants={itemVariants}
             >
               <Image
-                className="flax-img mt-6 sm:mt-8 lg:mt-10 mb-3 sm:mb-4 lg:mb-5 w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20"
+                className="flax-img mt-10 mb-5"
                 alt={`${product.name} Лен Ростовская область`}
                 width={80}
                 height={80}
                 src={flaxIcons[index].img}
               />
-              <p className="flax_product-name text-xs sm:text-sm lg:text-[16px] text-[#EADCC1] font-extrabold text-center px-2">
+              <p className="flax_product-name text-[8px] sm:text-[10px] md:text-xs lg:text-[16px] text-[#EADCC1] font-extrabold mb-3 sm:mb-0">
                 {product.name}
               </p>
-              <p className="flax_product-percentage text-xl sm:text-2xl lg:text-[36px] text-[#F7C35F] font-bold">
+              <p className="flax_product-percentage text-lg sm:text-xl md:text-2xl lg:text-[36px] text-[#F7C35F]">
                 {product.percentage}
               </p>
-            </motion.li>
+            </motion.div>
           ))}
         </ul>
 
