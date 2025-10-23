@@ -192,13 +192,31 @@ export default function Product() {
           <Image src={logo_flax} width={40} height={40} alt="Логотип льна Великанова" />
         </div>
 
-        <ul className="flex justify-around product_params-len">
+        <ul className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 product_params-len px-4">
           {flaxData.map((product, index) => (
-            <motion.div key={index} className="flax_block-item will-change-transform" custom={index} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} variants={itemVariants}>
-              <Image className="flax-img mt-10 mb-5" alt={`${product.name} Лен Ростовская область`} width={80} height={80} src={flaxIcons[index].img} />
-              <p className="flax_product-name text-[16px] text-[#EADCC1] font-extrabold">{product.name}</p>
-              <p className="flax_product-percentage text-[36px] text-[#F7C35F]">{product.percentage}</p>
-            </motion.div>
+            <motion.li
+              key={index}
+              className="flax_block-item flex flex-col items-center will-change-transform"
+              custom={index}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              variants={itemVariants}
+            >
+              <Image
+                className="flax-img mt-6 sm:mt-8 lg:mt-10 mb-3 sm:mb-4 lg:mb-5 w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20"
+                alt={`${product.name} Лен Ростовская область`}
+                width={80}
+                height={80}
+                src={flaxIcons[index].img}
+              />
+              <p className="flax_product-name text-xs sm:text-sm lg:text-[16px] text-[#EADCC1] font-extrabold text-center px-2">
+                {product.name}
+              </p>
+              <p className="flax_product-percentage text-xl sm:text-2xl lg:text-[36px] text-[#F7C35F] font-bold">
+                {product.percentage}
+              </p>
+            </motion.li>
           ))}
         </ul>
 
