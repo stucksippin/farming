@@ -60,6 +60,7 @@ body {
 
 
 .custom-btn {
+  height: 40px;
   background-color: #F7C35F;
   color: black !important;
   border: none;
@@ -191,7 +192,7 @@ html {
 .title_for-block {
   color: #EADCC1;
   text-align: center;
-  font-size: 48px;
+  font-size: 24px;
   margin-bottom: 50px;
   font-weight: 700;
 }

@@ -14,6 +14,7 @@ import protein from '../assets/protein.png';
 import wheatIcon from '../assets/wheat.png';
 import scales from '../assets/scales.png';
 import drop from '../assets/drop.png';
+import Link from 'next/link';
 
 // ---- Данные продуктов ----
 const wheatData = [
@@ -101,8 +102,14 @@ export default function Product() {
 
   return (
     <section className="section section_wheat farm_container">
-      <h2 className="title_for-block">О ПРОДУКТЕ</h2>
-
+      <div className='flex flex-col items-center mb-8 md:mb-12 px-4'>
+        <span className='text-center text-2xl md:text-3xl lg:text-[42px] mb-4 md:mb-[20px] font-bold text-[#EADCC1]'>
+          Наша продукция
+        </span>
+        <h2 className="title_for-block text-center text-xl md:text-2xl lg:text-3xl px-4">
+          Купить пшеницу и лен от производителя
+        </h2>
+      </div>
       {/* ---- ПШЕНИЦА ---- */}
       <div className="block_wheat mb-[15%]">
         <div className="wheat_title flex items-center justify-start pr-[5%] product_block_wheat">
@@ -124,10 +131,36 @@ export default function Product() {
           ))}
         </div>
 
-        <div className="flex justify-center mt-[10%] z-[3]">
-          <Button className="button custom-btn" type="primary" onClick={() => setIsWheatModalOpen(true)}>
-            Подробнее о пшенице
-          </Button>
+        <div className="flex flex-col justify-center mt-[10%] z-[3] justify-center  ">
+
+          <div className='flex flex-col items-center justify-center'>
+            <p className="text-[#EADCC1] max-w-3xl text-center mb-6 px-4 text-sm md:text-base lg:text-lg">
+              Продаем пшеницу высокого качества. Подходит для мельниц, производства комбикорма
+              и экспорта. Цена за тонну — по запросу. Купить фуражную пшеницу оптом
+              можно с доставкой по Ростовской области.
+            </p>
+
+            <div className='flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto px-4'>
+              <Link
+                href="#contact"
+                aria-label="Купить пшеницу оптом в Ростовской области"
+                className='button custom-btn bg-[#F7C35F] inline-flex items-center justify-center w-full sm:w-auto'
+              >
+                Связаться
+              </Link>
+
+              <Button
+                className="button custom-btn w-full sm:w-auto"
+                type="primary"
+                onClick={() => setIsWheatModalOpen(true)}
+              >
+                Подробнее о пшенице
+              </Button>
+            </div>
+          </div>
+
+
+
 
           <Modal
             className="ant-modal custom-modal"

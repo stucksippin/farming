@@ -5,31 +5,32 @@ import Link from 'next/link'
 
 export default function VisitBlock() {
     return (
-        <section className='farm_container section px-4 py-8 md:py-12'>
-            <div className='flex flex-col md:flex-row md:justify-between md:items-center gap-8'>
+        <section className='farm_container section px-4 sm:px-6 lg:px-8 py-8 md:py-12 lg:py-16'>
+            <div className='flex flex-col lg:flex-row lg:justify-between lg:items-center gap-6 lg:gap-8'>
 
                 {/* Текстовый блок */}
-                <div className='flex flex-col justify-center md:max-w-[70%]'>
-                    <h1 className='visit_title text-2xl md:text-[42px] text-[#F7C35F] font-bold leading-tight'>
-                        Купить пшеницу и лен в Ростовской области от фермерского хозяйства
+                <div className='flex flex-col justify-center lg:max-w-[65%] xl:max-w-[70%]'>
+                    <h1 className='visit_title text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-[42px] text-[#F7C35F] font-bold leading-tight'>
+                        Пшеница от фермерского хозяйства в Ростовской области – продажа оптом
                     </h1>
 
-                    <p className='visit_subtitle text-lg md:text-[36px] text-[#EADCC1] font-bold mt-4 md:mt-6 leading-snug'>
-                        Фермерское хозяйство Великанова — прямые поставки зерна, подсолнечника и льна масличного. Фуражная пшеница, 3-4 класс, новый урожай
-                    </p>
+                    <h2 className='text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[36px] text-[#EADCC1] mt-3 sm:mt-4 md:mt-5 lg:mt-6 '>
+                        Фуражная пшеница и 3-4 класс оптом, лен масличный, подсолнечник.
+                        Новый урожай 2025, прямые поставки без посредников
+                    </h2>
 
                     <Link
                         href="#contact"
-                        className='visit_button text-base md:text-[18px] bg-[#F7C35F] rounded-[15px] w-fit px-6 md:px-[50px] py-3 md:py-[10px] mt-8 md:mt-[50px] font-semibold hover:bg-[#e5b34d] transition-colors'
+                        className='visit_button text-sm sm:text-base lg:text-lg inline-flex items-center justify-center bg-[#F7C35F] rounded-[15px] w-full sm:w-fit px-6 sm:px-8 lg:px-[50px] py-3 lg:py-[12px] mt-6 sm:mt-8 lg:mt-[50px] font-semibold hover:bg-[#e5b34d] transition-colors'
                     >
                         Связаться
                     </Link>
                 </div>
 
-                {/* Картинка - скрыта на мобильных */}
-                <div className='hidden md:block md:flex-shrink-0'>
+                {/* Картинка */}
+                <div className='hidden lg:flex lg:flex-shrink-0 lg:justify-center xl:justify-end'>
                     <Image
-                        className='visit-wheat-img'
+                        className='visit-wheat-img w-full max-w-[400px] lg:max-w-[500px] xl:max-w-[600px] h-auto'
                         src={wheat}
                         width={600}
                         height={570}

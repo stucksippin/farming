@@ -26,6 +26,18 @@ const faqData = [
         question: "Какие документы предоставляете?",
         answer: "Полный пакет документов: сертификаты качества, декларации соответствия, товарные накладные. Все документы оформляются в день отгрузки.",
     },
+    {
+        question: "Какая закупочная цена на пшеницу в 2025 году?",
+        answer: "Закупочные цены зависят от класса: фуражная от X руб/т, 3-й класс от Y руб/т, 4-й класс от Z руб/т. Актуальные цены уточняйте по телефону."
+    },
+    {
+        question: "Продаете пшеницу на экспорт?",
+        answer: "Да, поставляем пшеницу 3-4 класса на экспорт. Предоставляем документы для таможенного оформления. Учитываем пошлины на экспорт пшеницы из России."
+    },
+    {
+        question: "Есть пшеница нового урожая 2025?",
+        answer: "Продаем зерно нового урожая с августа 2025. Возможно бронирование партий. Качество подтверждено лабораторными анализами."
+    }
 ];
 
 // Компонент FAQ аккордеон
@@ -110,7 +122,7 @@ export default function InfoBlock() {
                 className="text-center mb-12"
             >
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#F7C35F] mb-6 leading-tight">
-                    Фермерское хозяйство Великанова
+                    Зерно от фермерского хозяйства в Тацинском районе
                 </h2>
                 <p className="text-xl md:text-2xl text-[#F7C35F]/80 mb-8">
                     Зерно оптом в Тацинском районе, Ростовская область
@@ -140,7 +152,7 @@ export default function InfoBlock() {
                 className="mb-16"
             >
                 <h2 className="text-2xl md:text-3xl font-bold text-[#F7C35F] text-center mb-10">
-                    Наша продукция
+                    Пшеница, лен и подсолнечник — прямые поставки без посредников
                 </h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -179,7 +191,7 @@ export default function InfoBlock() {
                 className="mb-16 bg-gradient-to-r from-[#F7C35F]/5 to-transparent rounded-2xl p-8"
             >
                 <h2 className="text-2xl md:text-3xl font-bold text-[#F7C35F] text-center mb-10">
-                    Преимущества работы с нами
+                    Почему выгодно купить пшеницу от производителя
                 </h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
