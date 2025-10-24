@@ -146,7 +146,7 @@ export default function Product() {
                 aria-label="Купить пшеницу оптом в Ростовской области"
                 className='button custom-btn bg-[#F7C35F] inline-flex items-center justify-center w-full sm:w-auto'
               >
-                Связаться
+                Оставить заявку
               </Link>
 
               <Button
