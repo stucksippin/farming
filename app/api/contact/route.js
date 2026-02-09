@@ -4,10 +4,11 @@ export async function POST(request) {
         const TOKEN = "6735435635:AAGV_xDBi8d0NZiAJbvnJ7jpNbvOxBFzz18";
         const CHAT_ID = "-4228242392";
         const text = `
-Имя: ${data.firstName} %0A
-Номер: ${data.mobileNumber} %0A
-Дополнительная информация: ${data.more} %0A
-        `;
+Имя: ${data.name} %0A
+Номер: ${data.phone} %0A
+Дополнительная информация: ${data.message || '-'} %0A
+`;
+
 
         const response = await fetch(`https://api.telegram.org/bot${TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=${text}`);
         const result = await response.json();
