@@ -122,7 +122,7 @@ export default function InfoBlock() {
                 className="text-center mb-12"
             >
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#F7C35F] mb-6 leading-tight">
-                    Зерно от фермерского хозяйства в Тацинском районе
+                    Зерно от фермерского хозяйства
                 </h2>
                 <p className="text-xl md:text-2xl text-[#F7C35F]/80 mb-8">
                     Зерно оптом в Тацинском районе, Ростовская область
@@ -151,9 +151,9 @@ export default function InfoBlock() {
                 transition={{ duration: 0.6 }}
                 className="mb-16"
             >
-                <h2 className="text-2xl md:text-3xl font-bold text-[#F7C35F] text-center mb-10">
+                <span className="text-2xl md:text-3xl font-bold text-[#F7C35F] text-center mb-10">
                     Пшеница, лен и подсолнечник — прямые поставки без посредников
-                </h2>
+                </span>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     {products.map((product, index) => (

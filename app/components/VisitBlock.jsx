@@ -14,10 +14,10 @@ export default function VisitBlock() {
                         Пшеница от фермерского хозяйства в Ростовской области – продажа оптом
                     </h1>
 
-                    <h2 className='text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[36px] text-[#EADCC1] mt-3 sm:mt-4 md:mt-5 lg:mt-6 '>
+                    <span className='text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[36px] text-[#EADCC1] mt-3 sm:mt-4 md:mt-5 lg:mt-6 '>
                         Фуражная пшеница и 3-4 класс оптом, лен масличный, подсолнечник.
                         Новый урожай 2025, прямые поставки без посредников
-                    </h2>
+                    </span>
 
                     <Link
                         href="#contact"
