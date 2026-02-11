@@ -166,7 +166,7 @@ export default async function ArticlePage({ params }) {
                         </div>
                         <div>
                             <h3 className="text-xl font-bold text-[#F7C35F] mb-2" itemProp="name">{post.author}</h3>
-                            <p className="mb-3" itemProp="description">Фермер с 15-летним стажем, владелец фермерского хозяйства в Тацинском районе...</p>
+                            <p className="mb-3" itemProp="description">Фермер с 15-летним практическим опытом, владелец хозяйства в Тацинском районе Ростовской области. Специализация — производство продовольственной пшеницы, подсолнечника и льна. В работе опирается на экономику поля: контроль себестоимости, управление рисками, системная защита растений и грамотная стратегия продаж зерна.</p>
                             <a href="tel:+79281789282" className="inline-flex items-center gap-2 text-[#F7C35F] font-semibold hover:text-[#e5b44f]" itemProp="telephone">
                                 Связаться с автором
                             </a>
