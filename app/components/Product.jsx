@@ -104,7 +104,7 @@ export default function Product() {
     <section className="section section_wheat farm_container">
       <div className='flex flex-col items-center mb-8 md:mb-12 px-4'>
         <span className='text-center text-2xl md:text-3xl lg:text-[42px] mb-4 md:mb-[20px] font-bold text-[#EADCC1]'>
-          Наша продукция льна и пшена
+          Наша продукция
         </span>
       </div>
       {/* ---- ПШЕНИЦА ---- */}

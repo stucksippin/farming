@@ -1,6 +1,8 @@
 // app/layout.js
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Header from "./components/Header";
+import Contact from "./components/Contact";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,8 +22,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="ru">
+
       <body className={inter.className}>
-        {children}
+        <Header />
+        <main> {children}</main>
+
         <script type="application/ld+json" dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
@@ -37,9 +42,10 @@ export default function RootLayout({ children }) {
             },
             "telephone": "+79281789282",
             "email": "velikanov_n@mail.ru",
-            "url": "https://velikanova-dev.vercel.app"
+            "url": "https://velikanov-farming.ru"
           })
         }} />
+        <Contact />
       </body>
     </html>
   );

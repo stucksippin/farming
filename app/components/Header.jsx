@@ -3,35 +3,48 @@ import React from 'react'
 
 export default function Header() {
     return (
-        <section className='farm_container mx-auto px-4 py-4 md:py-8 text-[#EADCC1]'>
-            <div className='flex flex-col md:flex-row md:justify-between md:items-center gap-4'>
-                {/* Название - всегда видимо */}
-                <span className='header_title text-lg md:text-2xl header_text font-extralight'>
-                    Великанов Фермерское Хозяйство
-                </span>
+        <header className='bg-[#334C35]/80 backdrop-blur-md sticky top-0 z-50 shadow-md'>
+            <div className='farm_container mx-auto px-4 py-4 md:py-6 flex flex-col md:flex-row md:justify-between md:items-center gap-4'>
 
-                {/* Навигация и телефон */}
-                <div className='flex flex-wrap items-center gap-4 md:gap-6'>
+                {/* Логотип / Название */}
+                <Link
+                    href={'/'}
+                    className='header_title text-2xl md:text-3xl font-extralight text-[#EADCC1] hover:text-yellow-500 transition-colors'
+                >
+                    🌾 Великанов Фермерское Хозяйство
+                </Link>
+
+                {/* Навигация */}
+                <nav className='flex flex-wrap items-center gap-4 md:gap-6'>
                     <Link
-                        className='header_text text-base md:text-2xl font-extralight hover:text-yellow-500 transition-colors'
                         href={'#wheat'}
+                        className='header_text text-lg md:text-xl font-light text-[#EADCC1] hover:text-yellow-500 transition-colors'
                     >
                         Пшеница
                     </Link>
                     <Link
-                        className='header_text text-base md:text-2xl font-extralight hover:text-yellow-500 transition-colors'
                         href={"#flex"}
+                        className='header_text text-lg md:text-xl font-light text-[#EADCC1] hover:text-yellow-500 transition-colors'
                     >
                         Лен
                     </Link>
                     <Link
-                        className='header_text text-base md:text-2xl font-extralight hover:text-yellow-500 whitespace-nowrap'
+                        href={"/blog"}
+                        className='header_text text-lg md:text-xl font-light text-[#EADCC1] hover:text-yellow-500 transition-colors'
+                    >
+                        Блог
+                    </Link>
+                    <Link
                         href={"tel:+79281789282"}
+                        className='header_text text-lg md:text-xl font-light text-[#EADCC1] hover:text-yellow-500 whitespace-nowrap border border-[#EADCC1]/40 px-3 py-1 rounded-md hover:border-yellow-500 transition-all'
                     >
                         +7 928 178-92-82
                     </Link>
-                </div>
+                </nav>
+
             </div>
-        </section>
+            {/* Декоративная линия под хедером */}
+            <div className='h-1 bg-yellow-500 w-full'></div>
+        </header>
     )
 }

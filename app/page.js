@@ -9,12 +9,11 @@ import VisitBlock from "./components/VisitBlock";
 export default function MainPage() {
   return (
     <div className="mx-auto container">
-      <Header />
+
       <VisitBlock />
       <Product />
       <Reviews />
       <InfoBlock />
-      <Contact />
 
     </div>
   );

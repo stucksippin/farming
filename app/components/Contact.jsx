@@ -147,7 +147,7 @@ export default function Contact() {
     };
 
     return (
-        <section id='contact' className="relative py-12 md:py-20 overflow-hidden">
+        <footer id='contact' className="relative py-12 md:py-20 overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-[#263C28] via-[#1f2f20] to-[#263C28]" />
             <div className="absolute top-0 left-0 w-96 h-96 bg-[#F7C35F]/5 rounded-full blur-3xl" />
             <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#F7C35F]/5 rounded-full blur-3xl" />
@@ -243,6 +243,6 @@ export default function Contact() {
                     <iframe src="https://yandex.ru/map-widget/v1/?ll=41.3607586%2C47.9071682&z=14&pt=41.3607586,47.9071682,pm2rdm" width="100%" height="100%" style={{ border: 0 }} allowFullScreen loading="lazy" title="Местоположение фермерского хозяйства Великанова" />
                 </motion.div>
             </div>
-        </section>
+        </footer>
     );
 }
