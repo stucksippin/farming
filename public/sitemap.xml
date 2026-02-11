@@ -3,7 +3,37 @@
   <url>
     <loc>https://velikanov-farming.ru</loc>
     <lastmod>2025-08-18</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+  </url>
+     <url>
+    <loc>https://velikanov-farming.ru/blog</loc>
+    <lastmod>2026-02-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://velikanov-farming.ru/blog/bolezni-i-vrediteli-pshenicy-i-podsolnechnika</loc>
+    <lastmod>2026-02-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+   <url>
+    <loc>https://velikanov-farming.ru/blog/rynok-zerna-v-2026-ceny-eksport-gospodderzhka-logistika-kurs</loc>
+    <lastmod>2026-02-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+   <url>
+    <loc>https://velikanov-farming.ru/blog/zakupochnye-ceny-na-zerno-kak-ne-prodat-v-minus</loc>
+    <lastmod>2026-02-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+   <url>
+    <loc>https://velikanov-farming.ru/blog/kak-vybrat-sort-pshenicy-dlya-rostovskoy-oblasti</loc>
+    <lastmod>2026-02-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>
