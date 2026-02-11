@@ -210,7 +210,7 @@ export default function Product() {
               <p className="flax_product-name text-[8px] sm:text-[10px] md:text-xs lg:text-[16px] text-[#EADCC1] font-extrabold mb-3 sm:mb-0">
                 {product.name}
               </p>
-              <p className="flax_product-percentage text-lg sm:text-xl md:text-2xl lg:text-[36px] text-[#F7C35F]">
+              <p className="flax_product-percentage mt-2 text-lg sm:text-xl md:text-2xl lg:text-[36px] text-[#F7C35F]">
                 {product.percentage}
               </p>
             </motion.div>
