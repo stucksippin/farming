@@ -37,11 +37,40 @@ export default function BlogPage() {
 
             <div className="mx-auto container text-[#EADCC1]">
                 {/* Breadcrumbs */}
-                <nav className="px-4 sm:px-6 lg:px-8 py-4 text-sm text-[#EADCC1]/60 flex items-center gap-2">
-                    <a href="/" className="hover:text-[#F7C35F] transition-colors">Главная</a>
+                <nav
+                    className="px-4 sm:px-6 lg:px-8 py-4 text-sm text-[#EADCC1]/60 flex items-center gap-2"
+                    itemScope
+                    itemType="https://schema.org/BreadcrumbList"
+                >
+                    <span
+                        itemProp="itemListElement"
+                        itemScope
+                        itemType="https://schema.org/ListItem"
+                    >
+                        <Link
+                            href="/"
+                            className="hover:text-[#F7C35F] transition-colors"
+                            itemProp="item"
+                        >
+                            <span itemProp="name">Главная</span>
+                        </Link>
+                        <meta itemProp="position" content="1" />
+                    </span>
+
                     <span>›</span>
-                    <span className="text-[#F7C35F]">Блог</span>
+
+                    <span
+                        itemProp="itemListElement"
+                        itemScope
+                        itemType="https://schema.org/ListItem"
+                    >
+                        <span className="text-[#F7C35F]" itemProp="name">
+                            Блог
+                        </span>
+                        <meta itemProp="position" content="2" />
+                    </span>
                 </nav>
+
 
                 {/* Hero Section */}
                 <section className="px-4 sm:px-6 lg:px-8 py-12 md:py-16 lg:py-20">
