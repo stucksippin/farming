@@ -42,10 +42,6 @@ const wheatColumns = [
   { title: 'Значение', dataIndex: 'meaning', key: 'meaning', width: 200 },
 ];
 
-const flaxColumns = [
-  { title: 'Параметр', dataIndex: 'name', key: 'name', width: 200 },
-  { title: 'Значение', dataIndex: 'percentage', key: 'percentage', width: 200 },
-];
 
 const wheatParams = [
   { name: 'ПРОТЕИН', value: '11.8%', area: 'protein', range: [-10, 10] },
@@ -88,8 +84,6 @@ function WheatParam({ param, index, scrollYProgress }) {
 
 // ---- Главный компонент ----
 export default function Product() {
-  const [isWheatModalOpen, setIsWheatModalOpen] = useState(false);
-  const [isFlaxModalOpen, setIsFlaxModalOpen] = useState(false);
 
   const wheatContainerRef = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -149,9 +143,9 @@ export default function Product() {
               <Button
                 className="button custom-btn w-full sm:w-auto"
                 type="primary"
-                onClick={() => setIsWheatModalOpen(true)}
+
               >
-                Подробнее о пшенице
+                <Link href={'/pshenitsa'}>Подробнее о пшенице</Link>
               </Button>
             </div>
           </div>
@@ -159,26 +153,7 @@ export default function Product() {
 
 
 
-          <Modal
-            className="ant-modal custom-modal"
-            title={null}
-            open={isWheatModalOpen}
-            onCancel={() => setIsWheatModalOpen(false)}
-            footer={null}
-            width={750}
-            centered
-            aria-label="Подробные данные о пшенице"
-          >
-            <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.9 }} transition={{ duration: 0.4, ease: 'easeOut' }} className="p-4">
-              <h2 className="text-xl font-bold text-center mb-4 text-[#8B5E00]">Характеристики пшеницы</h2>
-              <Table pagination={false} dataSource={wheatData} columns={wheatColumns} className="custom-table" caption="Характеристики пшеницы — Ростовская область" />
-              <div className="flex justify-center mt-6">
-                <Button className="custom-btn" type="primary" onClick={() => setIsWheatModalOpen(false)}>
-                  Закрыть
-                </Button>
-              </div>
-            </motion.div>
-          </Modal>
+
         </div>
       </div>
 
@@ -217,32 +192,11 @@ export default function Product() {
           ))}
         </ul>
 
-        {/* <div className="flex justify-center mt-[10%]">
-          <Button className="button custom-btn" type="primary" onClick={() => setIsFlaxModalOpen(true)}>
-            Подробнее о льне
+        {<div className="flex justify-center mt-[10%]">
+          <Button className="button custom-btn" type="primary" >
+            <Link href={'/len'}>Подробнее о льне</Link>
           </Button>
-
-          <Modal
-            className="ant-modal custom-modal"
-            title={null}
-            open={isFlaxModalOpen}
-            onCancel={() => setIsFlaxModalOpen(false)}
-            footer={null}
-            width={750}
-            centered
-            aria-label="Подробные данные о льне"
-          >
-            <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.9 }} transition={{ duration: 0.4, ease: 'easeOut' }} className="p-4">
-              <h2 className="text-xl font-bold text-center mb-4 text-[#8B5E00]">Характеристики льна</h2>
-              <Table pagination={false} dataSource={flaxData} columns={flaxColumns} className="custom-table" caption="Характеристики льна — Ростовская область" />
-              <div className="flex justify-center mt-6">
-                <Button className="custom-btn" type="primary" onClick={() => setIsFlaxModalOpen(false)}>
-                  Закрыть
-                </Button>
-              </div>
-            </motion.div>
-          </Modal>
-        </div> */}
+        </div>}
       </div>
 
       {/* ---- Schema.org JSON-LD ---- */}

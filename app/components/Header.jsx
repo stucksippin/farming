@@ -17,13 +17,13 @@ export default function Header() {
                 {/* Навигация */}
                 <nav className='flex flex-wrap items-center gap-4 md:gap-6'>
                     <Link
-                        href={'#wheat'}
+                        href={'/pshenitsa'}
                         className='header_text text-lg md:text-xl font-light text-[#EADCC1] hover:text-yellow-500 transition-colors'
                     >
                         Пшеница
                     </Link>
                     <Link
-                        href={"#flex"}
+                        href={"/len"}
                         className='header_text text-lg md:text-xl font-light text-[#EADCC1] hover:text-yellow-500 transition-colors'
                     >
                         Лен
