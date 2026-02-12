@@ -251,10 +251,6 @@ export default function WheatProductPage() {
                         Главная
                     </Link>
                     <span>/</span>
-                    <Link href="/#wheat" className="hover:text-[#F7C35F] transition-colors">
-                        Продукция
-                    </Link>
-                    <span>/</span>
                     <span className="text-[#F7C35F]">Пшеница</span>
                 </nav>
             </div>

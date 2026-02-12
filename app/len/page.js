@@ -7,7 +7,7 @@ import len from '../assets/len.png';
 
 import oil from '../assets/oil.png';
 import drop from '../assets/drop.png';
-import dust from '../assets/dust.png';
+import scales from '../assets/scales.png';
 import star from '../assets/star.png';
 import calendar from '../assets/calendar.png';
 
@@ -23,8 +23,8 @@ export default function FlaxProductPage() {
 
     const specifications = [
         { label: 'МАСЛИЧНОСТЬ', value: '44-46%', icon: oil, isImage: true },
-        { label: 'ВЛАЖНОСТЬ', value: 'до 10%', icon: drop, isImage: true },
-        { label: 'ЧИСТОТА', value: '98-99%', icon: dust, isImage: true },
+        { label: 'ВЛАЖНОСТЬ', value: 'до 13%', icon: drop, isImage: true },
+        { label: 'НАТУРНЫЙ ВЕС', value: '98-99%', icon: scales, isImage: true },
         { label: 'СОРНАЯ ПРИМЕСЬ', value: 'до 2%', icon: '🔍' },
         { label: 'СОРТ', value: '1-2 сорт', icon: star, isImage: true },
         { label: 'УРОЖАЙ', value: '2025 год', icon: calendar, isImage: true }
@@ -261,10 +261,6 @@ export default function FlaxProductPage() {
                 <nav className="flex items-center gap-2 text-sm text-[#EADCC1]/60">
                     <Link href="/" className="hover:text-[#F7C35F] transition-colors">
                         Главная
-                    </Link>
-                    <span>/</span>
-                    <Link href="/#flex" className="hover:text-[#F7C35F] transition-colors">
-                        Продукция
                     </Link>
                     <span>/</span>
                     <span className="text-[#F7C35F]">Лен масличный</span>
