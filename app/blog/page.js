@@ -2,6 +2,25 @@ import { posts } from './data/post';
 import Link from 'next/link';
 import CategoryIcon from '../components/CategotyIcon';
 
+
+
+
+export const metadata = {
+    title: "Блог фермерского хозяйства Великанова | Новости и советы по агро",
+    description:
+        "Читайте статьи о сельском хозяйстве, выращивании пшеницы, льна, подсолнечника и современных агротехнологиях от фермерского хозяйства Великанова.",
+    alternates: {
+        canonical: "https://velikanov-farming.ru/blog",
+    },
+    keywords: [
+        "фермерский блог",
+        "сельское хозяйство статьи",
+        "пшеница лен подсолнечник",
+        "агротехника советы",
+    ],
+};
+
+
 export default function BlogPage() {
     return (
         <div className="min-h-screen" style={{ backgroundColor: "#334C35", fontFamily: "'Inter', sans-serif" }}>
