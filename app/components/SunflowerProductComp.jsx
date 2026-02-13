@@ -18,7 +18,7 @@ export default function SunflowerProductComp() {
 
     const specifications = [
         { label: 'МАСЛИЧНОСТЬ', value: '48–52%', icon: oil, isImage: true },
-        { label: 'СОРТ', value: 'Высокоурожайный', icon: wheatIcon, isImage: true },
+        { label: 'СОРТ', value: 'НК Неома', icon: wheatIcon, isImage: true },
         { label: 'НАТУРНЫЙ ВЕС', value: '42–44', icon: scales, isImage: true },
         { label: 'ВЛАЖНОСТЬ', value: '7–8%', icon: drop, isImage: true },
         { label: 'СОРНАЯ ПРИМЕСЬ', value: 'до 2%', icon: dust, isImage: true },
@@ -596,7 +596,7 @@ export default function SunflowerProductComp() {
                         href="/pshenitsa"
                         className="bg-gradient-to-br from-[#2c1810]/50 to-[#1a0e08]/50 backdrop-blur rounded-2xl p-8 border border-[#F7C35F]/20 hover:border-[#F7C35F]/40 transition-all duration-300 hover:scale-105 group"
                     >
-                        <div className="text-6xl mb-4">🌾</div>
+                        <div className="text-4xl mb-4">🌾</div>
                         <span className="text-2xl font-bold text-[#F7C35F] mb-3 group-hover:text-[#e5b44f]">
                             Пшеница
                         </span>
