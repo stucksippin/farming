@@ -10,7 +10,7 @@ import protein from '../assets/protein.png';
 import wheatIcon from '../assets/wheat.png';
 import scales from '../assets/scales.png';
 import drop from '../assets/drop.png';
-import calendar from '../assets/calendar.png';
+import dust from '../assets/dust.png';
 import star from '../assets/star.png';
 
 
@@ -20,12 +20,12 @@ export default function WheatProductComp() {
 
 
     const specifications = [
-        { label: 'ПРОТЕИН', value: '11.8%', icon: protein, isImage: true },
-        { label: 'КЛЕЙКОВИНА', value: '20%', icon: wheatIcon, isImage: true },
-        { label: 'НАТУРНЫЙ ВЕС', value: '82.9', icon: scales, isImage: true },
-        { label: 'ВЛАЖНОСТЬ', value: '10.2%', icon: drop, isImage: true },
+        { label: 'ПРОТЕИН', value: '14.3%', icon: protein, isImage: true },
+        { label: 'КЛЕЙКОВИНА', value: '24.4%', icon: wheatIcon, isImage: true },
+        { label: 'НАТУРНЫЙ ВЕС', value: '78.2', icon: scales, isImage: true },
+        { label: 'ВЛАЖНОСТЬ', value: '10%', icon: drop, isImage: true },
+        { label: 'СОРНАЯ ПРИМЕСЬ', value: '2', icon: dust, isImage: true },
         { label: 'КЛАСС', value: '3-4 класс', icon: star, isImage: true },
-        { label: 'УРОЖАЙ', value: '2025 год', icon: calendar, isImage: true }
     ];
 
     const applications = [
@@ -55,9 +55,6 @@ export default function WheatProductComp() {
         'Прямые поставки от производителя без посредников',
         'Полный пакет сертификатов и документов',
         'Лабораторный контроль качества каждой партии',
-        'Гибкая система оплаты для постоянных клиентов',
-        'Доставка собственным транспортом по Ростовской области',
-        'Консультации агронома по применению'
     ];
 
 
@@ -102,22 +99,22 @@ export default function WheatProductComp() {
                             {
                                 "@type": "PropertyValue",
                                 "name": "Протеин",
-                                "value": "11.8%"
+                                "value": "14.3%"
                             },
                             {
                                 "@type": "PropertyValue",
                                 "name": "Клейковина",
-                                "value": "20%"
+                                "value": "24,5%"
                             },
                             {
                                 "@type": "PropertyValue",
                                 "name": "Натурный вес",
-                                "value": "82.9"
+                                "value": "78.2"
                             },
                             {
                                 "@type": "PropertyValue",
                                 "name": "Влажность",
-                                "value": "10.2%"
+                                "value": "10%"
                             },
                             {
                                 "@type": "PropertyValue",
@@ -181,7 +178,7 @@ export default function WheatProductComp() {
                                 "name": "Какой минимальный объём заказа?",
                                 "acceptedAnswer": {
                                     "@type": "Answer",
-                                    "text": "Минимальный объём заказа составляет 20 тонн. Для меньших объёмов возможны индивидуальные условия."
+                                    "text": "Минимальный объём заказа составляет 25 тонн. Для меньших объёмов возможны индивидуальные условия."
                                 }
                             },
                             {
@@ -200,37 +197,10 @@ export default function WheatProductComp() {
                                     "text": "Мы работаем как с предоплатой, так и с отсрочкой платежа для постоянных клиентов. Возможна оплата по безналичному расчёту и наличными."
                                 }
                             },
-                            {
-                                "@type": "Question",
-                                "name": "Как быстро осуществляется доставка?",
-                                "acceptedAnswer": {
-                                    "@type": "Answer",
-                                    "text": "По Тацинскому району доставка осуществляется в течение 1-2 дней после подтверждения заказа. По Ростовской области — 2-5 дней в зависимости от удалённости."
-                                }
-                            },
-                            {
-                                "@type": "Question",
-                                "name": "Можно ли заказать пшеницу определённого класса?",
-                                "acceptedAnswer": {
-                                    "@type": "Answer",
-                                    "text": "Да, у нас есть пшеница 3-го и 4-го класса, а также фуражная. Подберём оптимальный вариант под ваши потребности."
-                                }
-                            }
                         ]
                     })
                 }}
             />
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -292,11 +262,11 @@ export default function WheatProductComp() {
                             <div className="flex items-center justify-between mb-4">
                                 <div>
                                     <div className="text-[#EADCC1]/60 text-sm mb-1">Цена за тонну</div>
-                                    <div className="text-3xl font-bold text-[#F7C35F]">от 13 000 ₽</div>
+                                    <div className="text-3xl font-bold text-[#F7C35F]">от 15 000 ₽</div>
                                 </div>
                                 <div className="text-right">
                                     <div className="text-[#EADCC1]/60 text-sm mb-1">Минимальный заказ</div>
-                                    <div className="text-xl font-semibold text-[#EADCC1]">от 20 тонн</div>
+                                    <div className="text-xl font-semibold text-[#EADCC1]">от 25 тонн</div>
                                 </div>
                             </div>
                             <div className="text-xs text-[#EADCC1]/50">
@@ -588,7 +558,7 @@ export default function WheatProductComp() {
                     {[
                         {
                             q: 'Какой минимальный объём заказа?',
-                            a: 'Минимальный объём заказа составляет 20 тонн. Для меньших объёмов возможны индивидуальные условия.'
+                            a: 'Минимальный объём заказа составляет 25 тонн. Для меньших объёмов возможны индивидуальные условия.'
                         },
                         {
                             q: 'Предоставляете ли вы сертификаты качества?',
@@ -598,14 +568,7 @@ export default function WheatProductComp() {
                             q: 'Какие формы оплаты доступны?',
                             a: 'Мы работаем как с предоплатой, так и с отсрочкой платежа для постоянных клиентов. Возможна оплата по безналичному расчёту и наличными.'
                         },
-                        {
-                            q: 'Как быстро осуществляется доставка?',
-                            a: 'По Тацинскому району доставка осуществляется в течение 1-2 дней после подтверждения заказа. По Ростовской области — 2-5 дней в зависимости от удалённости.'
-                        },
-                        {
-                            q: 'Можно ли заказать пшеницу определённого класса?',
-                            a: 'Да, у нас есть пшеница 3-го и 4-го класса, а также фуражная. Подберём оптимальный вариант под ваши потребности.'
-                        }
+
                     ].map((faq, index) => (
                         <details
                             key={index}

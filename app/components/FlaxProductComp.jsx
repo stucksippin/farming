@@ -59,8 +59,6 @@ export default function FlaxProductComp() {
         'Полный пакет сертификатов и документов',
         'Лабораторный контроль качества каждой партии',
         'Низкая влажность — гарантия длительного хранения',
-        'Гибкая система оплаты для постоянных клиентов',
-        'Доставка собственным транспортом по Ростовской области'
     ];
 
     const handleInputChange = (e) => {
@@ -196,7 +194,7 @@ export default function FlaxProductComp() {
                                 "name": "Какой минимальный объём заказа льна?",
                                 "acceptedAnswer": {
                                     "@type": "Answer",
-                                    "text": "Минимальный объём заказа составляет 10 тонн. Для меньших объёмов возможны индивидуальные условия при наличии продукции на складе."
+                                    "text": "Минимальный объём заказа составляет 15 тонн. Для меньших объёмов возможны индивидуальные условия при наличии продукции на складе."
                                 }
                             },
                             {
@@ -312,7 +310,7 @@ export default function FlaxProductComp() {
                                 </div>
                                 <div className="text-right">
                                     <div className="text-[#EADCC1]/60 text-sm mb-1">Минимальный заказ</div>
-                                    <div className="text-xl font-semibold text-[#EADCC1]">от 10 тонн</div>
+                                    <div className="text-xl font-semibold text-[#EADCC1]">от 15 тонн</div>
                                 </div>
                             </div>
                             <div className="text-xs text-[#EADCC1]/50">
@@ -346,10 +344,10 @@ export default function FlaxProductComp() {
                                 </div>
                             </div>
                             <div className="flex items-center gap-3">
-                                <div className="text-[#F7C35F] text-2xl">✓</div>
+                                <div className="text-[#F7C35F] text-2xl">✗</div>
                                 <div>
                                     <div className="text-[#EADCC1]/60 text-xs">Наличие</div>
-                                    <div className="text-[#EADCC1] text-sm font-medium">В наличии</div>
+                                    <div className="text-[#EADCC1] text-sm font-medium">Продано</div>
                                 </div>
                             </div>
                         </div>
@@ -688,7 +686,7 @@ export default function FlaxProductComp() {
                     {[
                         {
                             q: 'Какой минимальный объём заказа льна?',
-                            a: 'Минимальный объём заказа составляет 10 тонн. Для меньших объёмов возможны индивидуальные условия при наличии продукции на складе.'
+                            a: 'Минимальный объём заказа составляет 15 тонн. Для меньших объёмов возможны индивидуальные условия при наличии продукции на складе.'
                         },
                         {
                             q: 'Какая масличность вашего льна?',
