@@ -283,40 +283,6 @@ export default function Product() {
         </div>
       </div>
 
-      {/* ---- Schema.org JSON-LD ---- */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@graph": [
-              {
-                "@type": "Product",
-                "name": "Пшеница",
-                "description": "Продовольственная и фуражная пшеница с высоким содержанием клейковины. Ростовская область, Тацинский район.",
-                "brand": "Фермерское хозяйство Великанова",
-                "offers": {
-                  "@type": "Offer",
-                  "availability": "https://schema.org/InStock",
-                  "priceCurrency": "RUB"
-                }
-              },
-              {
-                "@type": "Product",
-                "name": "Лен масличный",
-                "description": "Семена льна масличного с масличностью 44-46%, урожай 2025 года. Ростовская область, Тацинский район.",
-                "brand": "Фермерское хозяйство Великанова",
-                "offers": {
-                  "@type": "Offer",
-                  "availability": "https://schema.org/InStock",
-                  "priceCurrency": "RUB"
-                }
-              }
-            ]
-          })
-        }}
-      />
-
     </section>
   );
 }
