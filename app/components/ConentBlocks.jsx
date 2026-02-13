@@ -1,3 +1,6 @@
+// /contentblocks.jsx
+
+
 export function IntroBlock({ text }) {
     return (
         <p className="text-xl md:text-2xl leading-relaxed mb-8 font-light">

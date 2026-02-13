@@ -1,3 +1,5 @@
+// /visitblock.jsx
+
 import Image from 'next/image'
 import React from 'react'
 import wheat from '../assets/visit-wheat.png'
@@ -11,12 +13,12 @@ export default function VisitBlock() {
                 {/* Текстовый блок */}
                 <div className='flex flex-col justify-center lg:max-w-[60%] xl:max-w-[65%]'>
                     <h1 className='visit_title text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[52px] text-[#F7C35F] font-bold leading-[1.2] mb-4 sm:mb-5 lg:mb-6'>
-                        Продажа зерновых и масличных культур от фермера
+                        Продажа пшеницы, льна и подсолнечника оптом от производителя
                     </h1>
 
                     <p className='text-base sm:text-lg md:text-xl lg:text-2xl text-[#EADCC1] leading-[1.5] font-light'>
-                        Работаем напрямую с хозяйства без перекупщиков — стабильные объемы,
-                        фиксированные характеристики зерна и оперативная отгрузка с собственного
+                        Работаем напрямую с хозяйства без перекупщиков — стабильные объёмы,
+                        проверенные характеристики зерна и оперативная отгрузка с собственного
                         склада в Ростовской области.
                     </p>
 
