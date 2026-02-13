@@ -28,7 +28,7 @@ import Link from 'next/link';
 const flaxData = [
   { key: '1', name: 'МАСЛИЧНОСТЬ', percentage: '44-46%' },
   { key: '2', name: 'ВЛАЖНОСТЬ', percentage: 'до 13%' },
-  { key: '3', name: 'НАТУРНЫЙ ВЕС', percentage: '%' },
+  { key: '3', name: 'НАТУРНЫЙ ВЕС', percentage: '82%' },
   { key: '4', name: 'СОРНАЯ ПРИМЕСЬ', percentage: 'до 2%' },
 ];
 
