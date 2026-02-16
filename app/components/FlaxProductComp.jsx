@@ -740,7 +740,7 @@ export default function FlaxProductComp() {
                         href="/pshenitsa"
                         className="bg-gradient-to-br from-[#2c1810]/50 to-[#1a0e08]/50 backdrop-blur rounded-2xl p-8 border border-[#F7C35F]/20 hover:border-[#F7C35F]/40 transition-all duration-300 hover:scale-105 group"
                     >
-                        <div className="text-6xl mb-4">🌾</div>
+                        <div className="text-3xl mb-4">🌾</div>
                         <span className="text-2xl font-bold text-[#F7C35F] mb-3 group-hover:text-[#e5b44f]">
                             Пшеница
                         </span>
@@ -755,18 +755,25 @@ export default function FlaxProductComp() {
                         </span>
                     </Link>
 
-                    <div className="bg-gradient-to-br from-[#2c1810]/50 to-[#1a0e08]/50 backdrop-blur rounded-2xl p-8 border border-[#F7C35F]/20 hover:border-[#F7C35F]/40 transition-all duration-300 hover:scale-105 group opacity-60 cursor-not-allowed">
-                        <div className="text-6xl mb-4">🌻</div>
-                        <span className="text-2xl font-bold text-[#F7C35F] mb-3">
+
+                    <Link
+                        href="/podsolnechnik"
+                        className="bg-gradient-to-br from-[#2c1810]/50 to-[#1a0e08]/50 backdrop-blur rounded-2xl p-8 border border-[#F7C35F]/20 hover:border-[#F7C35F]/40 transition-all duration-300 hover:scale-105 group"
+                    >
+                        <div className="text-3xl mb-4">🌻</div>
+                        <span className="text-2xl font-bold text-[#F7C35F] mb-3 group-hover:text-[#e5b44f]">
                             Подсолнечник
                         </span>
                         <p className="text-[#EADCC1]/80 mb-4">
-                            Семена с высоким процентом масла для переработки
+                            Качественное сырьё для изготовления масла с высоким содержанием масличности
                         </p>
-                        <span className="text-[#EADCC1]/40 font-semibold">
-                            Скоро в продаже
+                        <span className="text-[#F7C35F] font-semibold flex items-center gap-2">
+                            Подробнее
+                            <svg className="w-5 h-5 transition-transform group-hover:translate-x-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                            </svg>
                         </span>
-                    </div>
+                    </Link>
                 </div>
             </section>
         </div>
