@@ -67,4 +67,16 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+    <url>
+    <loc>https://velikanov-farming.ru/blog/intensivnaya-tehnologiya-podsolnechnika-okupaemost</loc>
+    <lastmod>2026-02-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+    <url>
+    <loc>https://velikanov-farming.ru/blog/maslichnyj-len-alternativa-podsolnechniku</loc>
+    <lastmod>2026-02-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>
