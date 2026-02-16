@@ -1,31 +1,23 @@
+'use client';
+
 import { posts } from './data/post';
 import Link from 'next/link';
 import CategoryIcon from '../components/CategotyIcon';
-
-
-
-
-export const metadata = {
-    title: "Блог фермерского хозяйства Великанова | Новости и советы по агро",
-    description:
-        "Читайте статьи о сельском хозяйстве, выращивании пшеницы, льна, подсолнечника и современных агротехнологиях от фермерского хозяйства Великанова.",
-    alternates: {
-        canonical: "https://velikanov-farming.ru/blog",
-    },
-    keywords: [
-        "фермерский блог",
-        "сельское хозяйство статьи",
-        "пшеница лен подсолнечник",
-        "агротехника советы",
-    ],
-};
-
+import { useState } from 'react';
 
 export default function BlogPage() {
+    const [selectedCategory, setSelectedCategory] = useState('Все статьи');
+
+    // Получаем уникальные категории из постов
+    const categories = ['Все статьи', ...Array.from(new Set(posts.map(post => post.category)))];
+
+    // Фильтруем посты по выбранной категории
+    const filteredPosts = selectedCategory === 'Все статьи'
+        ? posts
+        : posts.filter(post => post.category === selectedCategory);
+
     return (
         <div className="min-h-screen" style={{ backgroundColor: "#334C35", fontFamily: "'Inter', sans-serif" }}>
-
-
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{
@@ -90,7 +82,6 @@ export default function BlogPage() {
                     </span>
                 </nav>
 
-
                 {/* Hero Section */}
                 <section className="px-4 sm:px-6 lg:px-8 py-12 md:py-16 lg:py-20">
                     <div className="max-w-4xl mx-auto text-center animate-fadeIn">
@@ -107,57 +98,64 @@ export default function BlogPage() {
                 <section className="px-4 sm:px-6 lg:px-8 mb-12">
                     <div className="max-w-7xl mx-auto">
                         <div className="flex flex-wrap gap-3 justify-center">
-                            <button className="category-tag px-6 py-2 rounded-full bg-[#F7C35F] text-[#2c1810] font-semibold">
-                                Все статьи
-                            </button>
-                            <button className="category-tag px-6 py-2 rounded-full bg-[#F7C35F]/20 text-[#F7C35F] border border-[#F7C35F]/40 hover:bg-[#F7C35F]/30">
-                                Пшеница
-                            </button>
-                            <button className="category-tag px-6 py-2 rounded-full bg-[#F7C35F]/20 text-[#F7C35F] border border-[#F7C35F]/40 hover:bg-[#F7C35F]/30">
-                                Лен
-                            </button>
-                            <button className="category-tag px-6 py-2 rounded-full bg-[#F7C35F]/20 text-[#F7C35F] border border-[#F7C35F]/40 hover:bg-[#F7C35F]/30">
-                                Агротехника
-                            </button>
-                            <button className="category-tag px-6 py-2 rounded-full bg-[#F7C35F]/20 text-[#F7C35F] border border-[#F7C35F]/40 hover:bg-[#F7C35F]/30">
-                                Рынок зерна
-                            </button>
+                            {categories.map(category => (
+                                <button
+                                    key={category}
+                                    onClick={() => setSelectedCategory(category)}
+                                    className={`category-tag px-6 py-2 rounded-full font-semibold transition-all ${selectedCategory === category
+                                        ? 'bg-[#F7C35F] text-[#2c1810]'
+                                        : 'bg-[#F7C35F]/20 text-[#F7C35F] border border-[#F7C35F]/40 hover:bg-[#F7C35F]/30'
+                                        }`}
+                                >
+                                    {category}
+                                </button>
+                            ))}
                         </div>
                     </div>
                 </section>
 
                 {/* Blog Posts Grid */}
                 <section className="px-4 sm:px-6 lg:px-8 pb-20">
-                    <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {posts.map(post => (
-                            <article key={post.slug} className="blog-card bg-gradient-to-br from-[#2c1810] to-[#1a0e08] rounded-xl border border-[#F7C35F]/20 hover:border-[#F7C35F]/40 overflow-hidden transition-all hover:transform hover:scale-105">
-                                <div className="relative h-48 bg-gradient-to-br from-[#F7C35F]/20 to-[#F7C35F]/5 flex items-center justify-center">
-                                    <CategoryIcon category={post.category} />
-                                    <span className="absolute top-4 left-4 px-3 py-1 bg-[#F7C35F] text-[#2c1810] text-xs font-semibold rounded-full">
-                                        {post.category}
-                                    </span>
-                                </div>
-                                <div className="p-6">
-                                    <div className="flex items-center gap-4 mb-3 text-sm text-[#EADCC1]/60">
-                                        <span>{post.date}</span>
-                                        <span>•</span>
-                                        <span>{post.readTime} чтения</span>
-                                    </div>
-                                    <h2 className="text-xl font-bold text-[#F7C35F] mb-3 hover:text-[#e5b44f] transition-colors">
-                                        <Link href={`/blog/${post.slug}`}>{post.title}</Link>
-                                    </h2>
-                                    <p className="text-[#EADCC1] text-sm leading-relaxed mb-4">
-                                        {post.excerpt}
-                                    </p>
-                                    <Link href={`/blog/${post.slug}`} className="inline-flex items-center gap-2 text-[#F7C35F] font-semibold hover:gap-3 transition-all">
-                                        Читать далее
-                                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                                        </svg>
-                                    </Link>
-                                </div>
-                            </article>
-                        ))}
+                    <div className="max-w-7xl mx-auto">
+                        {filteredPosts.length === 0 ? (
+                            <div className="text-center py-12">
+                                <p className="text-xl text-[#EADCC1]/60">
+                                    Статьи в этой категории скоро появятся
+                                </p>
+                            </div>
+                        ) : (
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                                {filteredPosts.map(post => (
+                                    <article key={post.slug} className="blog-card bg-gradient-to-br from-[#2c1810] to-[#1a0e08] rounded-xl border border-[#F7C35F]/20 hover:border-[#F7C35F]/40 overflow-hidden transition-all hover:transform hover:scale-105">
+                                        <div className="relative h-48 bg-gradient-to-br from-[#F7C35F]/20 to-[#F7C35F]/5 flex items-center justify-center">
+                                            <CategoryIcon category={post.category} />
+                                            <span className="absolute top-4 left-4 px-3 py-1 bg-[#F7C35F] text-[#2c1810] text-xs font-semibold rounded-full">
+                                                {post.category}
+                                            </span>
+                                        </div>
+                                        <div className="p-6">
+                                            <div className="flex items-center gap-4 mb-3 text-sm text-[#EADCC1]/60">
+                                                <span>{post.date}</span>
+                                                <span>•</span>
+                                                <span>{post.readTime} чтения</span>
+                                            </div>
+                                            <h2 className="text-xl font-bold text-[#F7C35F] mb-3 hover:text-[#e5b44f] transition-colors">
+                                                <Link href={`/blog/${post.slug}`}>{post.title}</Link>
+                                            </h2>
+                                            <p className="text-[#EADCC1] text-sm leading-relaxed mb-4">
+                                                {post.excerpt}
+                                            </p>
+                                            <Link href={`/blog/${post.slug}`} className="inline-flex items-center gap-2 text-[#F7C35F] font-semibold hover:gap-3 transition-all">
+                                                Читать далее
+                                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                                </svg>
+                                            </Link>
+                                        </div>
+                                    </article>
+                                ))}
+                            </div>
+                        )}
                     </div>
                 </section>
             </div>
