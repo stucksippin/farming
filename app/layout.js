@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
         <script type="application/ld+json" dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "AgriculturalBusiness",
+            "@type": "LocalBusiness",
             "name": "Фермерское хозяйство Великанова",
             "address": {
               "@type": "PostalAddress",

@@ -10,6 +10,7 @@ import drop from '../assets/drop.png';
 import scales from '../assets/scales.png';
 import star from '../assets/star.png';
 import calendar from '../assets/calendar.png';
+import PriceCalculator from './PriceCalculator';
 
 
 export default function FlaxProductComp() {
@@ -138,20 +139,6 @@ export default function FlaxProductComp() {
                                 "value": "1-2 сорт"
                             }
                         ],
-                        "seller": {
-                            "@type": "Organization",
-                            "name": "Фермерское хозяйство Великанова",
-                            "telephone": "+79281789282",
-                            "email": "velikanov_n@mail.ru",
-                            "address": {
-                                "@type": "PostalAddress",
-                                "streetAddress": "хутор Новороссошанский",
-                                "addressLocality": "Тацинский район",
-                                "addressRegion": "Ростовская область",
-                                "postalCode": "347083",
-                                "addressCountry": "RU"
-                            }
-                        }
                     })
                 }}
             />
@@ -423,6 +410,15 @@ export default function FlaxProductComp() {
                         >
                             <h2>Условия доставки</h2>
                         </button>
+                        <button
+                            onClick={() => setActiveTab('calculator')}
+                            className={`flex-1 px-6 py-4 font-semibold transition-all ${activeTab === 'calculator'
+                                ? 'bg-[#F7C35F]/10 text-[#F7C35F] border-b-2 border-[#F7C35F]'
+                                : 'text-[#EADCC1]/60 hover:text-[#EADCC1] hover:bg-[#F7C35F]/5'
+                                }`}
+                        >
+                            <h2>Рассчитать стоимость</h2>
+                        </button>
                     </div>
 
                     {/* Tabs Content */}
@@ -674,9 +670,33 @@ export default function FlaxProductComp() {
                                 </div>
                             </div>
                         )}
+
+                        {activeTab === 'calculator' && (
+                            <PriceCalculator
+                                productName="льна"
+                                basePrice={38000}
+                                minVolume={15}
+                                volumeDiscounts={[
+                                    { from: 15, to: 29, discount: 0, label: '15-29 т' },
+                                    { from: 30, to: 49, discount: 1, label: '30-49 т' },
+                                    { from: 50, to: 99, discount: 2, label: '50-99 т' },
+                                    { from: 100, to: Infinity, discount: 3, label: '100+ т' }
+                                ]}
+                                deliveryRates={[
+                                    { distance: 50, rate: 0, label: 'Тацинский район (бесплатно)' },
+                                    { distance: 100, rate: 400, label: '50-100 км (400 ₽/т)' },
+                                    { distance: 200, rate: 600, label: '100-200 км (600 ₽/т)' },
+                                    { distance: 300, rate: 800, label: '200-300 км (800 ₽/т)' },
+                                    { distance: Infinity, rate: 1200, label: 'Более 300 км (1200 ₽/т)' }
+                                ]}
+                            />
+                        )}
                     </div>
                 </div>
             </section>
+
+
+
 
             {/* FAQ Section */}
             <section className="farm_container mx-auto px-4 py-12">
