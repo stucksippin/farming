@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
 import Contact from "./components/Contact";
+import YandexMetrika from "./components/YandexMetrikaInitializer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,7 +21,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="ru">
 
+
+
       <body className={inter.className}>
+        <YandexMetrika />
+
         <Header />
         <main> {children}</main>
 
@@ -44,6 +49,7 @@ export default function RootLayout({ children }) {
         }} />
         <Contact />
       </body>
+
     </html>
   );
 }
