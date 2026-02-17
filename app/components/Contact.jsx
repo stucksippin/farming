@@ -4,7 +4,7 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Phone, Mail, MapPin, Send, CheckCircle, AlertCircle, User, MessageSquare } from 'lucide-react';
+import { Phone, Mail, MapPin, Send, CheckCircle, AlertCircle, User, MessageSquare, Shield } from 'lucide-react';
 
 const PhoneInput = ({ value, onChange, error }) => {
     const [focused, setFocused] = useState(false);
@@ -77,6 +77,8 @@ export default function Contact() {
     const [touched, setTouched] = useState({});
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitStatus, setSubmitStatus] = useState(null);
+    const [privacyAccepted, setPrivacyAccepted] = useState(false);
+    const [privacyError, setPrivacyError] = useState(false);
 
     const validateField = (name, value) => {
         switch (name) {
@@ -116,12 +118,17 @@ export default function Contact() {
             if (error) newErrors[key] = error;
         });
 
-        if (Object.keys(newErrors).length) {
+        if (!privacyAccepted) {
+            setPrivacyError(true);
+        }
+
+        if (Object.keys(newErrors).length || !privacyAccepted) {
             setErrors(newErrors);
             setTouched({ name: true, phone: true, message: true });
             return;
         }
 
+        setPrivacyError(false);
         setIsSubmitting(true);
 
         try {
@@ -136,6 +143,7 @@ export default function Contact() {
                 setFormData({ name: '', phone: '', message: '' });
                 setTouched({});
                 setErrors({});
+                setPrivacyAccepted(false);
             } else {
                 setSubmitStatus('error');
             }
@@ -154,7 +162,8 @@ export default function Contact() {
             <div className="absolute top-0 left-0 w-96 h-96 bg-[#F7C35F]/5 rounded-full blur-3xl" />
             <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#F7C35F]/5 rounded-full blur-3xl" />
             <div className="relative z-10 px-4 md:px-8 max-w-7xl mx-auto">
-                {/* заголовок */}
+
+                {/* Заголовок */}
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
                     <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#F7C35F] mb-4">КОНТАКТЫ</h2>
                     <p className="text-[#EADCC1] text-lg">Свяжитесь с нами для заказа или консультации</p>
@@ -167,7 +176,7 @@ export default function Contact() {
                         <ContactInfo icon={MapPin} title="АДРЕС" content={<>Хутор Новороссошанский<br />Тацинский район<br />Ростовская область</>} link="https://www.google.ru/maps/place/Новороссошанский,+Ростовская+обл.,+347083" linkText="Показать на карте" />
                     </motion.div>
 
-                    {/* форма */}
+                    {/* Форма */}
                     <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="bg-[#1a0e08]/30 backdrop-blur rounded-2xl p-8 border border-[#F7C35F]/20">
                         <h3 className="text-2xl font-semibold text-[#F7C35F] mb-6">Оставьте заявку</h3>
                         <div className="space-y-6">
@@ -205,7 +214,50 @@ export default function Contact() {
                                 </AnimatePresence>
                             </div>
 
-                            {/* кнопка отправки */}
+                            {/* Согласие на обработку ПД (152-ФЗ) */}
+                            <div>
+                                <label className="flex items-start gap-3 cursor-pointer group">
+                                    <div className="relative flex-shrink-0 mt-0.5">
+                                        <input
+                                            type="checkbox"
+                                            checked={privacyAccepted}
+                                            onChange={(e) => {
+                                                setPrivacyAccepted(e.target.checked);
+                                                if (e.target.checked) setPrivacyError(false);
+                                            }}
+                                            className="sr-only"
+                                        />
+                                        <div className={`w-5 h-5 rounded border-2 transition-all duration-200 flex items-center justify-center
+                                            ${privacyAccepted
+                                                ? 'bg-[#F7C35F] border-[#F7C35F]'
+                                                : privacyError
+                                                    ? 'border-red-400 bg-transparent'
+                                                    : 'border-[#F7C35F]/40 bg-transparent group-hover:border-[#F7C35F]/70'
+                                            }`}>
+                                            {privacyAccepted && (
+                                                <svg className="w-3 h-3 text-[#2c1810]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                                                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                                                </svg>
+                                            )}
+                                        </div>
+                                    </div>
+                                    <span className={`text-sm leading-relaxed transition-colors ${privacyError ? 'text-red-400' : 'text-[#EADCC1]/70 group-hover:text-[#EADCC1]/90'}`}>
+                                        Я даю согласие на обработку персональных данных в соответствии с{' '}
+                                        <a href="/privacy-policy" className="text-[#F7C35F]/80 hover:text-[#F7C35F] underline underline-offset-2 transition-colors" target="_blank" rel="noopener noreferrer">
+                                            политикой конфиденциальности
+                                        </a>
+                                    </span>
+                                </label>
+                                <AnimatePresence>
+                                    {privacyError && (
+                                        <motion.p initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} className="text-red-400 text-sm mt-2 flex items-center gap-1">
+                                            <AlertCircle className="w-4 h-4" />Необходимо ваше согласие
+                                        </motion.p>
+                                    )}
+                                </AnimatePresence>
+                            </div>
+
+                            {/* Кнопка отправки */}
                             <motion.button type="button" onClick={handleSubmit} disabled={isSubmitting} whileHover={{ scale: isSubmitting ? 1 : 1.02 }} whileTap={{ scale: isSubmitting ? 1 : 0.98 }} className={`w-full py-4 rounded-lg font-semibold flex items-center justify-center gap-2 transition-all duration-300 ${isSubmitting ? 'bg-[#F7C35F]/50 text-[#2c1810]/50 cursor-not-allowed' : 'bg-[#F7C35F] text-[#2c1810] hover:bg-[#e5b44f] shadow-lg'}`}>
                                 {isSubmitting ? (
                                     <>
@@ -218,7 +270,7 @@ export default function Contact() {
                                 )}
                             </motion.button>
 
-                            {/* статус */}
+                            {/* Статус отправки */}
                             <AnimatePresence>
                                 {submitStatus && (
                                     <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 20 }} className={`p-4 rounded-lg flex items-center gap-3 ${submitStatus === 'success' ? 'bg-green-500/10 border border-green-500/20' : 'bg-red-500/10 border border-red-500/20'}`}>
@@ -240,10 +292,39 @@ export default function Contact() {
                     </motion.div>
                 </div>
 
-                {/* карта */}
-                <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="w-full h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl border border-[#F7C35F]/20">
+                {/* Карта */}
+                <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="w-full h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl border border-[#F7C35F]/20 mb-12">
                     <iframe src="https://yandex.ru/map-widget/v1/?ll=41.3607586%2C47.9071682&z=14&pt=41.3607586,47.9071682,pm2rdm" width="100%" height="100%" style={{ border: 0 }} allowFullScreen loading="lazy" title="Местоположение фермерского хозяйства Великанова" />
                 </motion.div>
+
+                {/* Правовая информация об ИП */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                    className="border-t border-[#F7C35F]/10 pt-8"
+                >
+                    <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                        {/* Реквизиты ИП */}
+                        <div className="flex items-start gap-3">
+                            <Shield className="w-4 h-4 text-[#F7C35F]/40 flex-shrink-0 mt-0.5" />
+                            <p className="text-[#EADCC1]/40 text-sm leading-relaxed">
+                                ИП Великанов Николай Николаевич&nbsp;&nbsp;·&nbsp;&nbsp;
+                                ОГРНИП&nbsp;318619600238345&nbsp;&nbsp;·&nbsp;&nbsp;
+                                ИНН&nbsp;615508070458
+                            </p>
+                        </div>
+                        {/* Ссылка на политику */}
+                        <a
+                            href="/privacy-policy"
+                            className="text-[#EADCC1]/40 text-sm hover:text-[#F7C35F]/70 transition-colors whitespace-nowrap flex-shrink-0"
+                        >
+                            Политика конфиденциальности
+                        </a>
+                    </div>
+                </motion.div>
+
             </div>
         </footer>
     );
