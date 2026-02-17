@@ -58,6 +58,7 @@ export default function SunflowerProductComp() {
     return (
         <div className="min-h-screen bg-gradient-to-b from-[#1a0e08] to-[#263C28]">
 
+
             {/* Schema.org Product - Подсолнечник */}
             <script
                 type="application/ld+json"
@@ -67,6 +68,7 @@ export default function SunflowerProductComp() {
                         "@type": "Product",
                         "name": "Семена подсолнечника оптом от производителя",
                         "description": "Купить семена подсолнечника в Ростовской области напрямую от производителя. Семена подсолнуха оптом. Цена подсолнечника Ростовская область — зависит от объёма партии и условий доставки.",
+                        "image": "https://velikanov-farming.ru/images/sunflower.png",
                         "brand": {
                             "@type": "Organization",
                             "name": "Фермерское хозяйство Великанова"
@@ -75,9 +77,10 @@ export default function SunflowerProductComp() {
                             "@type": "AggregateOffer",
                             "url": "https://velikanov-farming.ru/podsolnechnik",
                             "priceCurrency": "RUB",
-                            "lowPrice": "18000",
-                            "highPrice": "22000",
-                            "priceValidUntil": "2025-12-31",
+                            "lowPrice": "34000",
+                            "highPrice": "38000",
+                            "priceValidUntil": "2026-12-31",
+                            "availability": "https://schema.org/OutOfStock",
                             "eligibleRegion": {
                                 "@type": "Place",
                                 "name": "Ростовская область, Россия"
@@ -88,11 +91,10 @@ export default function SunflowerProductComp() {
                             { "@type": "PropertyValue", "name": "Масличность", "value": "48–52%" },
                             { "@type": "PropertyValue", "name": "Влажность", "value": "7–8%" },
                             { "@type": "PropertyValue", "name": "Сорная примесь", "value": "до 2%" }
-                        ],
+                        ]
                     })
                 }}
             />
-
             {/* Schema.org Breadcrumbs - Подсолнечник */}
             <script
                 type="application/ld+json"

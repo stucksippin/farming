@@ -78,6 +78,7 @@ export default function FlaxProductComp() {
                         "@type": "Product",
                         "name": "Лен масличный оптом",
                         "description": "Высококачественный лен масличный 1-2 сорта от фермерского хозяйства Великанова. Масличность 44-46%, влажность до 10%, чистота 98-99%. Идеально для маслобойных производств, пищевой и комбикормовой промышленности.",
+                        "image": "https://velikanov-farming.ru/images/len.png",
                         "brand": {
                             "@type": "Organization",
                             "name": "Фермерское хозяйство Великанова"
@@ -88,7 +89,8 @@ export default function FlaxProductComp() {
                             "priceCurrency": "RUB",
                             "lowPrice": "38000",
                             "highPrice": "42000",
-                            "priceValidUntil": "2025-12-31",
+                            "priceValidUntil": "2026-12-31",
+                            "availability": "https://schema.org/OutOfStock",
                             "eligibleRegion": {
                                 "@type": "Place",
                                 "name": "Ростовская область, Россия"
@@ -96,32 +98,12 @@ export default function FlaxProductComp() {
                         },
                         "category": "Масличные культуры",
                         "additionalProperty": [
-                            {
-                                "@type": "PropertyValue",
-                                "name": "Масличность",
-                                "value": "44-46%"
-                            },
-                            {
-                                "@type": "PropertyValue",
-                                "name": "Влажность",
-                                "value": "до 10%"
-                            },
-                            {
-                                "@type": "PropertyValue",
-                                "name": "Чистота",
-                                "value": "98-99%"
-                            },
-                            {
-                                "@type": "PropertyValue",
-                                "name": "Сорная примесь",
-                                "value": "до 2%"
-                            },
-                            {
-                                "@type": "PropertyValue",
-                                "name": "Сорт",
-                                "value": "1-2 сорт"
-                            }
-                        ],
+                            { "@type": "PropertyValue", "name": "Масличность", "value": "44-46%" },
+                            { "@type": "PropertyValue", "name": "Влажность", "value": "до 10%" },
+                            { "@type": "PropertyValue", "name": "Чистота", "value": "98-99%" },
+                            { "@type": "PropertyValue", "name": "Сорная примесь", "value": "до 2%" },
+                            { "@type": "PropertyValue", "name": "Сорт", "value": "1-2 сорт" }
+                        ]
                     })
                 }}
             />

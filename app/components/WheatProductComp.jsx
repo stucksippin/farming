@@ -79,6 +79,7 @@ export default function WheatProductComp() {
                         "@type": "Product",
                         "name": "Пшеница 3-4 класса оптом",
                         "description": "Продовольственная и фуражная пшеница 3-4 класса от фермерского хозяйства Великанова. Высокое содержание клейковины 20%, протеин 11.8%, влажность 10.2%. Идеально для мукомольных, хлебопекарных и комбикормовых предприятий.",
+                        "image": "https://velikanov-farming.ru/images/wheat.png",
                         "brand": {
                             "@type": "Organization",
                             "name": "Фермерское хозяйство Великанова"
@@ -89,7 +90,8 @@ export default function WheatProductComp() {
                             "priceCurrency": "RUB",
                             "lowPrice": "13000",
                             "highPrice": "15000",
-                            "priceValidUntil": "2025-12-31",
+                            "priceValidUntil": "2026-12-31",
+                            "availability": "https://schema.org/InStock",
                             "eligibleRegion": {
                                 "@type": "Place",
                                 "name": "Ростовская область, Россия"
@@ -97,32 +99,12 @@ export default function WheatProductComp() {
                         },
                         "category": "Зерновые культуры",
                         "additionalProperty": [
-                            {
-                                "@type": "PropertyValue",
-                                "name": "Протеин",
-                                "value": "14.3%"
-                            },
-                            {
-                                "@type": "PropertyValue",
-                                "name": "Клейковина",
-                                "value": "24,5%"
-                            },
-                            {
-                                "@type": "PropertyValue",
-                                "name": "Натурный вес",
-                                "value": "78.2"
-                            },
-                            {
-                                "@type": "PropertyValue",
-                                "name": "Влажность",
-                                "value": "10%"
-                            },
-                            {
-                                "@type": "PropertyValue",
-                                "name": "Класс",
-                                "value": "3-4 класс"
-                            }
-                        ],
+                            { "@type": "PropertyValue", "name": "Протеин", "value": "14.3%" },
+                            { "@type": "PropertyValue", "name": "Клейковина", "value": "24.5%" },
+                            { "@type": "PropertyValue", "name": "Натурный вес", "value": "78.2" },
+                            { "@type": "PropertyValue", "name": "Влажность", "value": "10%" },
+                            { "@type": "PropertyValue", "name": "Класс", "value": "3-4 класс" }
+                        ]
                     })
                 }}
             />
