@@ -1,82 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <url>
     <loc>https://velikanov-farming.ru</loc>
     <lastmod>2025-08-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-    <url>
+
+  <url>
     <loc>https://velikanov-farming.ru/len</loc>
     <lastmod>2025-08-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-    <url>
+
+  <url>
     <loc>https://velikanov-farming.ru/pshenitsa</loc>
     <lastmod>2025-08-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-    </url>
-    <url>
+
+  <url>
     <loc>https://velikanov-farming.ru/podsolnechnik</loc>
     <lastmod>2025-08-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-     <url>
+
+  <url>
     <loc>https://velikanov-farming.ru/blog</loc>
     <lastmod>2026-02-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <url>
+    <loc>https://velikanov-farming.ru/privacy-policy</loc>
+    <lastmod>2026-02-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+  </url>
+
   <url>
     <loc>https://velikanov-farming.ru/blog/bolezni-i-vrediteli-pshenicy-i-podsolnechnika</loc>
     <lastmod>2026-02-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-   <url>
+
+  <url>
     <loc>https://velikanov-farming.ru/blog/rynok-zerna-v-2026-ceny-eksport-gospodderzhka-logistika-kurs</loc>
     <lastmod>2026-02-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-   <url>
+
+  <url>
     <loc>https://velikanov-farming.ru/blog/zakupochnye-ceny-na-zerno-kak-ne-prodat-v-minus</loc>
     <lastmod>2026-02-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-   <url>
+
+  <url>
     <loc>https://velikanov-farming.ru/blog/kak-vybrat-sort-pshenicy-dlya-rostovskoy-oblasti</loc>
     <lastmod>2026-02-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-    <url>
-    <loc>https://velikanov-farming.ru/blog/mozhno-li-zarabatyvat-na-ekologichnosti</loc> 
+
+  <url>
+    <loc>https://velikanov-farming.ru/blog/mozhno-li-zarabatyvat-na-ekologichnosti</loc>
     <lastmod>2026-02-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-    <url>
+
+  <url>
     <loc>https://velikanov-farming.ru/blog/selskoe-hozyaystvo-2030-tehnologii-budushchego</loc>
     <lastmod>2026-02-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-    <url>
+
+  <url>
     <loc>https://velikanov-farming.ru/blog/intensivnaya-tehnologiya-podsolnechnika-okupaemost</loc>
     <lastmod>2026-02-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-    <url>
-    <loc>https://velikanov-farming.ru/blog/maslichnyj-len-alternativa-podsolnechniku</loc>
+
+  <url>
+    <loc>https://velikanov-farming.ru/blog/maslichnyj-len-alternativa-podsolechniku</loc>
     <lastmod>2026-02-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+
 </urlset>
