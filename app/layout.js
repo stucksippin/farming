@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "./components/Header";
 import Contact from "./components/Contact";
 import YandexMetrika from "./components/YandexMetrikaInitializer";
+import CookieBanner from "./components/CookieBanner";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -48,6 +49,7 @@ export default function RootLayout({ children }) {
           })
         }} />
         <Contact />
+        <CookieBanner />
       </body>
 
     </html>
