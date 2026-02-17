@@ -16,12 +16,12 @@
 
       <!-- ПШЕНИЦА -->
       <offer id="wheat-2025" available="true">
-        <url>https://velikanov-farming.ru/pshenica</url>
+        <url>https://velikanov-farming.ru/pshenitsa</url>
         <price>15000</price>
         <currencyId>RUR</currencyId>
         <categoryId>1</categoryId>
         <name>Пшеница продовольственная 3 класс (урожай 2025)</name>
-    <picture>https://velikanov-farming/images/wheat.png</picture>
+    <picture>https://velikanov-farming.ru/images/wheat.png</picture>
 
         <param name="Цена">от 15000 руб/т</param>
         <param name="Продажа">Опт</param>
