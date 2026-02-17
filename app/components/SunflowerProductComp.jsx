@@ -207,7 +207,7 @@ export default function SunflowerProductComp() {
                             <div className="flex items-center justify-between mb-4">
                                 <div>
                                     <div className="text-[#EADCC1]/60 text-sm mb-1">Стоимость за тонну</div>
-                                    <div className="text-3xl font-bold text-[#F7C35F]">по запросу</div>
+                                    <div className="text-3xl font-bold text-[#F7C35F]">от 37 000 ₽</div>
                                 </div>
                                 <div className="text-right">
                                     <div className="text-[#EADCC1]/60 text-sm mb-1">Минимальная партия</div>

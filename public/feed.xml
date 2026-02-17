@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE yml_catalog SYSTEM "shops.dtd">
+<yml_catalog date="2026-02-17 12:00">
+  <shop>
+    <name>Velikanov Farming</name>
+    <company>Velikanov Farming</company>
+    <url>https://velikanov-farming.ru/</url>
+
+    <categories>
+      <category id="1">Пшеница</category>
+      <category id="2">Лен масличный</category>
+      <category id="3">Семена подсолнечника</category>
+    </categories>
+
+    <offers>
+
+      <!-- ПШЕНИЦА -->
+      <offer id="wheat-2025" available="true">
+        <url>https://velikanov-farming.ru/pshenica</url>
+        <price>15000</price>
+        <currencyId>RUR</currencyId>
+        <categoryId>1</categoryId>
+        <name>Пшеница продовольственная 3 класс (урожай 2025)</name>
+    <picture>https://velikanov-farming/images/wheat.png</picture>
+
+        <param name="Цена">от 15000 руб/т</param>
+        <param name="Продажа">Опт</param>
+        <param name="Минимальный объем">от 20 тонн</param>
+        <param name="Влажность">до 14%</param>
+        <param name="Клейковина">23–25%</param>
+        <param name="Регион">Ростовская область</param>
+        <param name="Урожай">2025</param>
+      </offer>
+
+      <!-- ЛЕН -->
+      <offer id="flax-2025" available="true">
+        <url>https://velikanov-farming.ru/len</url>
+        <price>38000</price>
+        <currencyId>RUR</currencyId>
+        <categoryId>2</categoryId>
+        <name>Лен масличный (урожай 2025)</name>
+          <picture>https://velikanov-farming.ru/images/len.png</picture>
+
+        <param name="Цена">от 38000 руб/т</param>
+        <param name="Продажа">Опт</param>
+        <param name="Минимальный объем">от 20 тонн</param>
+        <param name="Масличность">44–46%</param>
+        <param name="Влажность">до 13%</param>
+        <param name="Регион">Ростовская область</param>
+        <param name="Урожай">2025</param>
+      </offer>
+
+      <!-- ПОДСОЛНЕЧНИК -->
+      <offer id="sunflower-2025" available="true">
+        <url>https://velikanov-farming.ru/podsolnechnik</url>
+        <price>37000</price>
+        <currencyId>RUR</currencyId>
+        <categoryId>3</categoryId>
+        <name>Семена подсолнечника масличные (урожай 2025)</name>
+                <picture>https://velikanov-farming.ru/images/sunflower.png</picture>
+
+        <param name="Цена">от 37000 руб/т</param>
+        <param name="Продажа">Опт</param>
+        <param name="Минимальный объем">от 20 тонн</param>
+        <param name="Масличность">48–50%</param>
+        <param name="Влажность">до 8%</param>
+        <param name="Сорная примесь">до 2%</param>
+        <param name="Регион">Ростовская область</param>
+        <param name="Урожай">2025</param>
+      </offer>
+
+    </offers>
+  </shop>
+</yml_catalog>

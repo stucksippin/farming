@@ -15,12 +15,6 @@ import PriceCalculator from './PriceCalculator';
 
 export default function FlaxProductComp() {
     const [activeTab, setActiveTab] = useState('description');
-    const [formData, setFormData] = useState({
-        name: '',
-        phone: '',
-        volume: '',
-        message: ''
-    });
 
     const specifications = [
         { label: 'МАСЛИЧНОСТЬ', value: '44-46%', icon: oil, isImage: true },
@@ -61,17 +55,6 @@ export default function FlaxProductComp() {
         'Контроль качества в лаборатории для каждой партии',
         'Низкий уровень влажности — гарантия долгого хранения',
     ];
-
-    const handleInputChange = (e) => {
-        const { name, value } = e.target;
-        setFormData(prev => ({ ...prev, [name]: value }));
-    };
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log('Form submitted:', formData);
-        // Здесь логика отправки формы
-    };
 
     return (
         <div className="min-h-screen bg-gradient-to-b from-[#1a0e08] to-[#263C28]">
@@ -277,7 +260,7 @@ export default function FlaxProductComp() {
                     {/* Product Info */}
                     <div>
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#F7C35F] mb-6 leading-tight">
-                            Семена льна масличного оптом
+                            Лен масличный оптом
                         </h1>
 
                         <div className="bg-gradient-to-r from-[#F7C35F]/10 to-transparent rounded-xl p-6 mb-6 border-l-4 border-[#F7C35F]">
