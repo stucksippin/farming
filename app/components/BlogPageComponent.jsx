@@ -128,26 +128,38 @@ export default function BlogPageComponent() {
                         ) : (
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                                 {filteredPosts.slice().reverse().map(post => (
-                                    <article key={post.slug} className="blog-card bg-gradient-to-br from-[#2c1810] to-[#1a0e08] rounded-xl border border-[#F7C35F]/20 hover:border-[#F7C35F]/40 overflow-hidden transition-all hover:transform hover:scale-105">
-                                        <div className="relative h-48 bg-gradient-to-br from-[#F7C35F]/20 to-[#F7C35F]/5 flex items-center justify-center">
+                                    <article
+                                        key={post.slug}
+                                        className="blog-card bg-gradient-to-br from-[#2c1810] to-[#1a0e08] rounded-xl border border-[#F7C35F]/20 hover:border-[#F7C35F]/40 overflow-hidden transition-all hover:scale-105"
+                                    >
+                                        {/* блок с картинкой */}
+                                        <div className="relative h-64 bg-gradient-to-br from-[#F7C35F]/20 to-[#F7C35F]/5 flex items-center justify-center z-0">
                                             <CategoryIcon category={post.category} />
                                             <span className="absolute top-4 left-4 px-3 py-1 bg-[#F7C35F] text-[#2c1810] text-xs font-semibold rounded-full">
                                                 {post.category}
                                             </span>
                                         </div>
-                                        <div className="p-6">
+
+                                        {/* блок с текстом */}
+                                        <div className="relative z-10 -mt-10 p-6 bg-gradient-to-br from-[#2c1810] to-[#1a0e08] rounded-t-xl">
                                             <div className="flex items-center gap-4 mb-3 text-sm text-[#EADCC1]/60">
                                                 <span>{post.date}</span>
                                                 <span>•</span>
                                                 <span>{post.readTime} чтения</span>
                                             </div>
+
                                             <h2 className="text-xl font-bold text-[#F7C35F] mb-3 hover:text-[#e5b44f] transition-colors">
                                                 <Link href={`/blog/${post.slug}`}>{post.title}</Link>
                                             </h2>
+
                                             <p className="text-[#EADCC1] text-sm leading-relaxed mb-4">
                                                 {post.excerpt}
                                             </p>
-                                            <Link href={`/blog/${post.slug}`} className="inline-flex items-center gap-2 text-[#F7C35F] font-semibold hover:gap-3 transition-all">
+
+                                            <Link
+                                                href={`/blog/${post.slug}`}
+                                                className="inline-flex items-center gap-2 text-[#F7C35F] font-semibold hover:gap-3 transition-all"
+                                            >
                                                 Читать далее
                                                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -155,6 +167,7 @@ export default function BlogPageComponent() {
                                             </Link>
                                         </div>
                                     </article>
+
                                 ))}
                             </div>
                         )}
