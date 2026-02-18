@@ -1,4 +1,5 @@
 // app/layout.js
+import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
 import Contact from "./components/Contact";
@@ -7,7 +8,7 @@ import CookieBanner from "./components/CookieBanner";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
 
-
+const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   robots: {
     index: true,
