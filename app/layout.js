@@ -1,12 +1,11 @@
 // app/layout.js
-import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
 import Contact from "./components/Contact";
 import YandexMetrika from "./components/YandexMetrikaInitializer";
 import CookieBanner from "./components/CookieBanner";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
-const inter = Inter({ subsets: ["latin"] });
 
 
 export const metadata = {
@@ -26,7 +25,7 @@ export default function RootLayout({ children }) {
 
       <body className={inter.className}>
         <YandexMetrika />
-
+        <SpeedInsights />
         <Header />
         <main> {children}</main>
 
