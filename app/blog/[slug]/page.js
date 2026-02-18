@@ -70,7 +70,15 @@ export default async function ArticlePage({ params }) {
             case 'callout':
                 return <CalloutBlock key={index} title={block.title} text={block.text} />;
             case 'quote':
-                return <QuoteBlock key={index} text={block.text} author={block.author} />;
+                return (
+                    <QuoteBlock
+                        key={index}
+                        text={block.text}
+                        author={block.author}
+                        source={block.source}
+                        sourceUrl={block.sourceUrl}
+                    />
+                );
             case 'list':
                 return <ListBlock key={index} items={block.items} />;
             default:

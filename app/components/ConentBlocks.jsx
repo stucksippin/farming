@@ -36,10 +36,27 @@ export function CalloutBlock({ title, text }) {
     );
 }
 
-export function QuoteBlock({ text, author }) {
+export function QuoteBlock({ text, author, source, sourceUrl }) {
     return (
         <blockquote className="border-l-4 border-[#F7C35F] bg-[#F7C35F]/10 p-4 my-6 italic">
             {text} — {author}
+            {source && (
+                <>
+                    {', '}
+                    {sourceUrl ? (
+                        <a
+                            href={sourceUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-[#F7C35F] hover:underline"
+                        >
+                            {source}
+                        </a>
+                    ) : (
+                        <span>{source}</span>
+                    )}
+                </>
+            )}
         </blockquote>
     );
 }

@@ -18,7 +18,9 @@ export default function BlogPageComponent() {
 
     return (
         <div className="min-h-screen" style={{ backgroundColor: "#334C35", fontFamily: "'Inter', sans-serif" }}>
+            {/* схема */}
             <script
+
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{
                     __html: JSON.stringify({
@@ -125,7 +127,7 @@ export default function BlogPageComponent() {
                             </div>
                         ) : (
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                                {filteredPosts.map(post => (
+                                {filteredPosts.slice().reverse().map(post => (
                                     <article key={post.slug} className="blog-card bg-gradient-to-br from-[#2c1810] to-[#1a0e08] rounded-xl border border-[#F7C35F]/20 hover:border-[#F7C35F]/40 overflow-hidden transition-all hover:transform hover:scale-105">
                                         <div className="relative h-48 bg-gradient-to-br from-[#F7C35F]/20 to-[#F7C35F]/5 flex items-center justify-center">
                                             <CategoryIcon category={post.category} />
