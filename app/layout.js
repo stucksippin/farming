@@ -22,7 +22,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="ru">
 
-
+      <head>
+        <link rel="icon" href="https://velikanov-farming.ru/favicon.ico" type="image/x-icon"></link>
+      </head>
 
       <body className={inter.className}>
         <YandexMetrika />
