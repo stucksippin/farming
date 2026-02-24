@@ -112,5 +112,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  
+  <url>
+    <loc>https://velikanov-farming.ru/blog/urozhainost-pshenitsy-2026-60-ts-ga</loc>
+    <lastmod>2026-02-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 
 </urlset>
