@@ -527,8 +527,8 @@ export default function WheatProductComp() {
 
                         {activeTab === 'calculator' && (
                             <PriceCalculator
-                                productName="льна"
-                                basePrice={40000}
+                                productName="пшеницы"
+                                basePrice={15000}
                                 minVolume={15}
                                 volumeDiscounts={[
                                     { from: 15, to: 29, discount: 0, label: '15-29 т' },
