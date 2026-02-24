@@ -95,7 +95,8 @@ export default function WheatProductComp() {
                             "eligibleRegion": {
                                 "@type": "Place",
                                 "name": "Ростовская область, Россия"
-                            }
+                            },
+                            "offerCount": "1000"
                         },
                         "category": "Зерновые культуры",
                         "additionalProperty": [
