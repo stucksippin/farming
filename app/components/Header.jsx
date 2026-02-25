@@ -11,7 +11,7 @@ export default function Header() {
                     href={'/'}
                     className='header_title text-2xl md:text-3xl font-extralight text-[#EADCC1] hover:text-yellow-500 transition-colors'
                 >
-                    🌾 Великанов Фермерское Хозяйство
+                    🌾 КФХ Великанов
                 </Link>
 
                 {/* Навигация */}
