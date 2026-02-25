@@ -2,9 +2,77 @@
 
 'use client'
 
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Phone, Mail, MapPin, Send, CheckCircle, AlertCircle, User, MessageSquare, Shield } from 'lucide-react';
+
+// Компонент счетчика LiveInternet
+const LiveInternetCounter = () => {
+    const imgRef = useRef(null);
+
+    useEffect(() => {
+        if (imgRef.current && typeof document !== 'undefined') {
+            const src = `https://counter.yadro.ru/hit?t54.15;r${escape(document.referrer)};s${screen.width}*${screen.height}*${screen.colorDepth || screen.pixelDepth};u${escape(document.URL)};h${escape(document.title.substring(0, 150))};${Math.random()}`;
+            imgRef.current.src = src;
+        }
+    }, []);
+
+    return (
+        <a href="https://www.liveinternet.ru/click" target="_blank" rel="noopener noreferrer">
+            <img
+                ref={imgRef}
+                id="licntDEB9"
+                width="88"
+                height="31"
+                style={{ border: 'none' }}
+                title="LiveInternet: показано число просмотров и посетителей за 24 часа"
+                alt="LiveInternet counter"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+            />
+        </a>
+    );
+};
+
+// Компонент счетчика Mail.ru
+const MailRuCounter = () => {
+    useEffect(() => {
+        var _tmr = window._tmr || (window._tmr = []);
+        _tmr.push({ id: "3745149", type: "pageView", start: (new Date()).getTime() });
+
+        (function (d, w, id) {
+            if (d.getElementById(id)) return;
+            var ts = d.createElement("script");
+            ts.type = "text/javascript";
+            ts.async = true;
+            ts.id = id;
+            ts.src = "https://top-fwz1.mail.ru/js/code.js";
+            var f = function () {
+                var s = d.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(ts, s);
+            };
+            if (w.opera == "[object Opera]") {
+                d.addEventListener("DOMContentLoaded", f, false);
+            } else {
+                f();
+            }
+        })(document, window, "tmr-code");
+    }, []);
+
+    return null;
+};
+
+// Компонент логотипа Mail.ru
+const MailRuLogo = () => (
+    <a href="https://top-fwz1.mail.ru/jump?from=3745149" target="_blank" rel="noopener noreferrer">
+        <img
+            src="https://top-fwz1.mail.ru/counter?id=3745149;t=611;l=1"
+            height="40"
+            width="88"
+            alt="Top.Mail.Ru"
+            style={{ border: 'none' }}
+        />
+    </a>
+);
 
 const PhoneInput = ({ value, onChange, error }) => {
     const [focused, setFocused] = useState(false);
@@ -305,7 +373,7 @@ export default function Contact() {
                     transition={{ duration: 0.6 }}
                     className="border-t border-[#F7C35F]/10 pt-8"
                 >
-                    <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                    <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
                         {/* Реквизиты ИП */}
                         <div className="flex items-start gap-3">
                             <Shield className="w-4 h-4 text-[#F7C35F]/40 flex-shrink-0 mt-0.5" />
@@ -323,21 +391,30 @@ export default function Contact() {
                             Политика конфиденциальности
                         </a>
                     </div>
+
+                    {/* Счетчики и логотипы */}
+                    <div className="flex flex-col sm:flex-row gap-6  items-center flex-wrap">
+                        {/* Mail.ru counter */}
+                        <MailRuCounter />
+
+                        {/* AgroServer */}
+                        <a href="https://agroserver.ru/" target="_blank" rel="noopener noreferrer">
+                            <img
+                                src={`https://top.agroserver.ru/ct/?uid=20039&ref=${encodeURIComponent(typeof document !== 'undefined' ? document.referrer : '')}&rd=${Math.random()}`}
+                                width="88"
+                                height="31"
+                                alt="AgroServer"
+                                style={{ border: 'none' }}
+                            />
+                        </a>
+
+                        {/* LiveInternet */}
+                        <LiveInternetCounter />
+
+                        {/* Mail.ru Logo */}
+                        <MailRuLogo />
+                    </div>
                 </motion.div>
-
-                {/* Счетчик AgroServer */}
-                <div className="mt-8 text-center">
-                    <a href="https://agroserver.ru/" target="_blank" rel="noopener noreferrer">
-                        <img
-                            src={`https://top.agroserver.ru/ct/?uid=20039&ref=${encodeURIComponent(typeof document !== 'undefined' ? document.referrer : '')}&rd=${Math.random()}`}
-                            width="88"
-                            height="31"
-                            alt="AgroServer"
-                            style={{ border: 'none' }}
-                        />
-                    </a>
-                </div>
-
             </div>
         </footer>
     );

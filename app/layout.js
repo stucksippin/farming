@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
 import Contact from "./components/Contact";
+import FloatingContacts from "./components/FloatingContacts";
 import YandexMetrika from "./components/YandexMetrikaInitializer";
 import CookieBanner from "./components/CookieBanner";
 import { SpeedInsights } from "@vercel/speed-insights/next"
@@ -52,6 +53,7 @@ export default function RootLayout({ children }) {
         }} />
         <Contact />
         <CookieBanner />
+        <FloatingContacts />
       </body>
 
     </html>
