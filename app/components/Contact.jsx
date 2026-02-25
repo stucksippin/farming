@@ -325,6 +325,19 @@ export default function Contact() {
                     </div>
                 </motion.div>
 
+                {/* Счетчик AgroServer */}
+                <div className="mt-8 text-center">
+                    <a href="https://agroserver.ru/" target="_blank" rel="noopener noreferrer">
+                        <img
+                            src={`https://top.agroserver.ru/ct/?uid=20039&ref=${encodeURIComponent(typeof document !== 'undefined' ? document.referrer : '')}&rd=${Math.random()}`}
+                            width="88"
+                            height="31"
+                            alt="AgroServer"
+                            style={{ border: 'none' }}
+                        />
+                    </a>
+                </div>
+
             </div>
         </footer>
     );
