@@ -1,11 +1,11 @@
 // app/layout.js
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Header from "./components/Header";
-import Contact from "./components/Contact";
-import FloatingContacts from "./components/FloatingContacts";
+import Header from "./components/layout/Header";
+import Contact from "./components/layout/Contact";
+import FloatingContacts from "./components/layout/FloatingContacts";
 import YandexMetrika from "./components/YandexMetrikaInitializer";
-import CookieBanner from "./components/CookieBanner";
+import CookieBanner from "./components/layout/CookieBanner";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
 

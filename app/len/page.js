@@ -1,5 +1,5 @@
 
-import FlaxProductComp from "../components/FlaxProductComp";
+import FlaxProductComp from "../components/products/FlaxProductComp";
 
 export const metadata = {
     title: "Купить лен оптом с высокой масляничностью | Ростовская область",

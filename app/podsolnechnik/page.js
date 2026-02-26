@@ -1,4 +1,4 @@
-import SunflowerProductComp from "../components/SunflowerProductComp";
+import SunflowerProductComp from "../components/products/SunflowerProductComp";
 
 
 export const metadata = {

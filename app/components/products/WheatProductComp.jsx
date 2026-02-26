@@ -3,16 +3,15 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import sklad from '../assets/sklad-psheno.png';
-import flax_seed from '../assets/flax-seed.png';
-
-import protein from '../assets/protein.png';
-import wheatIcon from '../assets/wheat.png';
-import scales from '../assets/scales.png';
-import drop from '../assets/drop.png';
-import dust from '../assets/dust.png';
-import star from '../assets/star.png';
-import PriceCalculator from './PriceCalculator';
+import sklad from '../../assets/sklad-psheno.png';
+import flax_seed from '../../assets/flax-seed.png';
+import protein from '../../assets/protein.png';
+import wheatIcon from '../../assets/wheat.png';
+import scales from '../../assets/scales.png';
+import drop from '../../assets/drop.png';
+import dust from '../../assets/dust.png';
+import star from '../../assets/star.png';
+import PriceCalculator from '../PriceCalculator';
 
 
 

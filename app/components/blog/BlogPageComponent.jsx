@@ -1,8 +1,8 @@
 'use client'
 
-import { posts } from '../blog/data/post';
+import { posts } from '../../blog/data/post';
 import Link from 'next/link';
-import CategoryIcon from './CategotyIcon';
+import CategoryIcon from '../ui/CategotyIcon';
 import { useState } from 'react';
 
 export default function BlogPageComponent() {

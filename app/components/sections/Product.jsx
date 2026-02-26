@@ -8,18 +8,15 @@ import { Button, Modal, Table } from 'antd';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
 // Импорт изображений
-import logo_wheat from '../assets/logo-wheat.png';
-import logo_flax from '../assets/logo-flex.png';
-import logo_sunflower from '../assets/logo_sunflower.png';
-import bg_wheat from '../assets/product-wheat.png';
-import ellipse from '../assets/ellipse_underwheat.png';
-import protein from '../assets/protein.png';
-import wheatIcon from '../assets/wheat.png';
-import scales from '../assets/scales.png';
-import drop from '../assets/drop.png';
-
-import oil from '../assets/oil.png'
-import dust from '../assets/dust.png'
+import logo_wheat from '../../assets/logo-wheat.png';
+import logo_flax from '../../assets/logo-flex.png';
+import logo_sunflower from '../../assets/logo_sunflower.png';
+import bg_wheat from '../../assets/product-wheat.png';
+import ellipse from '../../assets/ellipse_underwheat.png';
+import scales from '../../assets/scales.png';
+import drop from '../../assets/drop.png';
+import oil from '../../assets/oil.png'
+import dust from '../../assets/dust.png'
 
 import Link from 'next/link';
 

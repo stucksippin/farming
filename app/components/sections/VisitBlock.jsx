@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import React from 'react'
-import wheat from '../assets/visit-wheat.png'
+import wheat from '../../assets/visit-wheat.png'
 import Link from 'next/link'
 
 export default function VisitBlock() {

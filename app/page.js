@@ -1,7 +1,7 @@
-import InfoBlock from "./components/InfoBlock";
-import Product from "./components/Product";
-import Reviews from "./components/Reviews";
-import VisitBlock from "./components/VisitBlock";
+import InfoBlock from "./components/sections/InfoBlock";
+import Product from "./components/sections/Product";
+import Reviews from "./components/sections/Reviews";
+import VisitBlock from "./components/sections/VisitBlock";
 
 export const metadata = {
   title: "Купить пшеницу, лен, подсолнечник оптом от фермера | ФХ Великанова",

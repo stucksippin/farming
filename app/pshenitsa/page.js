@@ -1,4 +1,4 @@
-import WheatProductComp from "../components/WheatProductComp";
+import WheatProductComp from "../components/products/WheatProductComp";
 
 export const metadata = {
     title: "Купить пшеницу 3-4 класса оптом | Ростовская область",

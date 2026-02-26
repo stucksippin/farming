@@ -1,4 +1,4 @@
-import BlogPageComponent from '../components/BlogPageComponent';
+import BlogPageComponent from '../components/blog/BlogPageComponent';
 
 
 export const metadata = {
