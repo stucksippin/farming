@@ -221,7 +221,7 @@ export default function Product() {
       {/* подсолнечник */}
       <div className="flax_block mt-[15%] mb-[10%]">
         <div className="flax_title flex items-center justify-start mb-12 md:mb-16 px-4">
-          <h2 id='flex' className="product_h text-2xl md:text-3xl lg:text-[36px] text-[#F7C35F] mr-4 md:mr-5 font-bold">СЕМЕНА ПОДСОЛНЕЧНИКА</h2>
+          <h2 id='flex' className="product_h text-2xl md:text-3xl lg:text-[36px] text-[#F7C35F] mr-4 md:mr-5 font-bold">СЕМЕЧКА ПОДСОЛНЕЧНИКА</h2>
           <Image src={logo_sunflower} width={40} height={40} alt="Логотип льна Великанова" className="w-8 h-8 md:w-10 md:h-10" />
         </div>
 

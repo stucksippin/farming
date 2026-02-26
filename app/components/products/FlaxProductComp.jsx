@@ -226,7 +226,7 @@ export default function FlaxProductComp() {
                                 <div className="absolute inset-0 flex items-center justify-center">
                                     <Image
                                         src={len}
-                                        alt="Семена льна масличного оптом"
+                                        alt="Лен масличный оптом"
                                         fill
                                         className="object-cover rounded-2xl"
                                     />
@@ -246,7 +246,7 @@ export default function FlaxProductComp() {
 
                         <div className="bg-gradient-to-r from-[#F7C35F]/10 to-transparent rounded-xl p-6 mb-6 border-l-4 border-[#F7C35F]">
                             <p className="text-[#EADCC1] text-lg leading-relaxed">
-                                Если вы хотите купить семена льна высокого качества, наше хозяйство предлагает
+                                Если вы хотите купить лен высокого качества, наше хозяйство предлагает
                                 лен масличный 1-2 сорта с превосходными характеристиками. Масличность 44-46%,
                                 минимальная влажность, максимальная чистота. Идеально подходит для маслобойных
                                 производств, пищевой и комбикормовой промышленности.
@@ -276,7 +276,7 @@ export default function FlaxProductComp() {
                                 href="#contact"
                                 className="flex-1 bg-[#F7C35F] text-[#2c1810] px-8 py-4 rounded-lg font-semibold text-center hover:bg-[#e5b44f] transition-all duration-300 hover:scale-105 shadow-lg"
                             >
-                                Купить семена льна
+                                Купить лен
                             </a>
                             <a
                                 href="tel:+79281789282"
@@ -390,11 +390,11 @@ export default function FlaxProductComp() {
                         {activeTab === 'description' && (
                             <div className="space-y-6">
                                 <span className="text-2xl font-bold text-[#F7C35F] mb-4">
-                                    Семена льна масличного от фермерского хозяйства Великанова
+                                    Лен масличный от фермерского хозяйства Великанова
                                 </span>
 
                                 <p className="text-[#EADCC1] leading-relaxed">
-                                    Наше фермерское хозяйство выращивает качественные семена льна масличного в Тацинском
+                                    Наше фермерское хозяйство выращивает качественный лен масличный в Тацинском
                                     районе Ростовской области. Лен — уникальная масличная культура с повышенным содержанием
                                     полезных Омега-3 жирных кислот, которая пользуется стабильным спросом на рынке
                                     здорового питания и масложировой промышленности.
@@ -426,7 +426,7 @@ export default function FlaxProductComp() {
 
                                 <div className="bg-[#2c1810]/50 rounded-xl p-6 border border-[#F7C35F]/20">
                                     <span className="text-lg font-semibold text-[#F7C35F] mb-3">
-                                        Почему выбирают наши семена?
+                                        Почему выбирают наш лен?
                                     </span>
                                     <div className="grid md:grid-cols-2 gap-4 mt-4">
                                         <div className="flex items-start gap-3">

@@ -27,14 +27,14 @@ export default function Header() {
                         href={"/len"}
                         className='header_text text-lg md:text-xl font-light text-[#EADCC1] hover:text-yellow-500 transition-colors'
                     >
-                        Семена льна
+                        Лен
                     </Link>
                     <span className='text-[#EADCC1]'>|</span>
                     <Link
                         href={'/podsolnechnik'}
                         className='header_text text-lg md:text-xl font-light text-[#EADCC1] hover:text-yellow-500 transition-colors'
                     >
-                        Семена подсолнечника
+                        Семечка подсолнечника
                     </Link>
                     <span className='text-[#EADCC1]'>|</span>
                     <Link

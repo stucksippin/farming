@@ -65,8 +65,8 @@ export default function SunflowerProductComp() {
                     __html: JSON.stringify({
                         "@context": "https://schema.org",
                         "@type": "Product",
-                        "name": "Семена подсолнечника оптом от производителя",
-                        "description": "Купить семена подсолнечника в Ростовской области напрямую от производителя. Семена подсолнуха оптом. Цена подсолнечника Ростовская область — зависит от объёма партии и условий доставки.",
+                        "name": "Подсолнечник оптом от производителя",
+                        "description": "Купить подсолнечник в Ростовской области напрямую от производителя. Подсолнуха оптом. Цена подсолнечника Ростовская область — зависит от объёма партии и условий доставки.",
                         "image": "https://velikanov-farming.ru/images/sunflower.png",
                         "brand": {
                             "@type": "Organization",
@@ -163,7 +163,7 @@ export default function SunflowerProductComp() {
                         Главная
                     </Link>
                     <span>/</span>
-                    <span className="text-[#F7C35F]">Семена подсолнечника</span>
+                    <span className="text-[#F7C35F]">Подсолнечник</span>
                 </nav>
             </div>
 
@@ -192,7 +192,7 @@ export default function SunflowerProductComp() {
                     {/* Product Info */}
                     <div>
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#F7C35F] mb-6 leading-tight">
-                            Семена подсолнечника оптом
+                            Семечка подсолнечника оптом
                         </h1>
 
                         <div className="bg-gradient-to-r from-[#F7C35F]/10 to-transparent rounded-xl p-6 mb-6 border-l-4 border-[#F7C35F]">
