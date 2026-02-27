@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  background-color: #334b35;
+  background-color: #263C28;
 }
 
 .farm_container {
@@ -215,7 +215,7 @@ html {
   width: 500px;
   height: 60px;
   border-radius: 8px;
-  background: #334B35;
+  background: #263C28;
   color: white;
   padding: 5px 20px;
 

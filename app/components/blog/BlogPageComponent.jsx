@@ -17,7 +17,7 @@ export default function BlogPageComponent() {
         : posts.filter(post => post.category === selectedCategory);
 
     return (
-        <div className="min-h-screen" style={{ backgroundColor: "#334C35", fontFamily: "'Inter', sans-serif" }}>
+        <div className="min-h-screen" style={{ backgroundColor: "#263C28", fontFamily: "'Inter', sans-serif" }}>
             {/* схема */}
             <script
 

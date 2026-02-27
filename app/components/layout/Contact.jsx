@@ -226,8 +226,8 @@ export default function Contact() {
 
     return (
         <footer id='contact' className="relative py-12 md:py-20 overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-br from-[#263C28] via-[#1f2f20] to-[#263C28]" />
-            <div className="absolute top-0 left-0 w-96 h-96 bg-[#F7C35F]/5 rounded-full blur-3xl" />
+            <div className="absolute inset-0 bg-gradient-to-br from-[#263C28] to-[#263C28]" />
+            <div className="absolute top-15 left-0 w-96 h-96 bg-[#F7C35F]/5 rounded-full blur-3xl" />
             <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#F7C35F]/5 rounded-full blur-3xl" />
             <div className="relative z-10 px-4 md:px-8 max-w-7xl mx-auto">
 

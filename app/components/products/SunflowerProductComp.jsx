@@ -55,7 +55,7 @@ export default function SunflowerProductComp() {
     ];
 
     return (
-        <div className="min-h-screen bg-gradient-to-b from-[#1a0e08] to-[#263C28]">
+        <div className="min-h-screen bg-[#263C28]">
 
 
             {/* Schema.org Product - Подсолнечник */}
@@ -192,7 +192,7 @@ export default function SunflowerProductComp() {
                     {/* Product Info */}
                     <div>
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#F7C35F] mb-6 leading-tight">
-                            Семечка подсолнечника оптом
+                            Подсолнечник масличный оптом
                         </h1>
 
                         <div className="bg-gradient-to-r from-[#F7C35F]/10 to-transparent rounded-xl p-6 mb-6 border-l-4 border-[#F7C35F]">

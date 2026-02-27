@@ -62,7 +62,7 @@ export default function WheatProductComp() {
 
 
     return (
-        <div className="min-h-screen bg-gradient-to-b from-[#1a0e08] to-[#263C28]">
+        <div className="min-h-screen bg-[#263C28]">
 
 
 

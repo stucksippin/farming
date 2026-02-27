@@ -51,7 +51,7 @@ export default async function ArticlePage({ params }) {
 
     if (!post) {
         return (
-            <div className="bg-[#334C35] min-h-screen text-[#EADCC1] flex items-center justify-center">
+            <div className="bg-[#263C28] min-h-screen text-[#EADCC1] flex items-center justify-center">
                 <div className="text-center">
                     <h1 className="text-3xl font-bold text-[#F7C35F] mb-4">Статья не найдена</h1>
                     <a href="/blog" className="text-[#F7C35F] hover:underline">Вернуться к блогу</a>
@@ -88,7 +88,7 @@ export default async function ArticlePage({ params }) {
     };
 
     return (
-        <div className="bg-[#334C35] min-h-screen text-[#EADCC1] font-sans">
+        <div className="bg-[#263C28] min-h-screen text-[#EADCC1] font-sans">
             {/* JSON-LD разметка для статьи */}
             <script
                 type="application/ld+json"

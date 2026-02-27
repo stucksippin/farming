@@ -1,11 +1,10 @@
 'use client'
 
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Star, Quote } from 'lucide-react';
 import Link from 'next/link';
 
-// Данные отзывов
 const reviewsData = [
     {
         id: 1,
@@ -63,11 +62,10 @@ const reviewsData = [
     }
 ];
 
-// Компонент одной карточки отзыва
 const ReviewCard = ({ review }) => (
     <div className="bg-gradient-to-br from-[#2c1810] to-[#1a0e08] 
     rounded-xl p-6 border border-[#F7C35F]/20 relative overflow-hidden
-    hover:border-[#F7C35F]/40 transition-all duration-300 h-full"
+    hover:border-[#F7C35F]/40 transition-colors duration-300 h-full"
     >
         <Quote className="absolute top-4 right-4 w-8 h-8 text-[#F7C35F]/10" />
 
@@ -104,6 +102,8 @@ const ReviewCard = ({ review }) => (
 export default function Reviews() {
     const [currentPage, setCurrentPage] = useState(0);
     const [itemsPerPage, setItemsPerPage] = useState(3);
+    // Направление свайпа для корректной анимации
+    const [direction, setDirection] = useState(1);
 
     useEffect(() => {
         const updateItemsPerPage = () => {
@@ -118,25 +118,28 @@ export default function Reviews() {
         return () => window.removeEventListener('resize', updateItemsPerPage);
     }, []);
 
-    // Рассчитываем общее количество страниц
     const totalPages = Math.ceil(reviewsData.length / itemsPerPage);
 
-    // Получаем отзывы для текущей страницы
     const getCurrentPageReviews = () => {
         const start = currentPage * itemsPerPage;
-        const end = start + itemsPerPage;
-        return reviewsData.slice(start, end);
+        return reviewsData.slice(start, start + itemsPerPage);
     };
 
     const nextPage = () => {
+        setDirection(1);
         setCurrentPage(prev => (prev + 1) % totalPages);
     };
 
     const prevPage = () => {
+        setDirection(-1);
         setCurrentPage(prev => (prev - 1 + totalPages) % totalPages);
     };
 
-    // Touch handlers для свайпов
+    const goToPage = (index) => {
+        setDirection(index > currentPage ? 1 : -1);
+        setCurrentPage(index);
+    };
+
     const [touchStart, setTouchStart] = useState(null);
 
     const handleTouchStart = (e) => {
@@ -145,16 +148,19 @@ export default function Reviews() {
 
     const handleTouchEnd = (e) => {
         if (!touchStart) return;
-
-        const touchEnd = e.changedTouches[0].clientX;
-        const diff = touchStart - touchEnd;
-
+        const diff = touchStart - e.changedTouches[0].clientX;
         if (Math.abs(diff) > 50) {
             if (diff > 0) nextPage();
             else prevPage();
         }
-
         setTouchStart(null);
+    };
+
+    // Варианты анимации с учётом направления
+    const variants = {
+        enter: (dir) => ({ opacity: 0, x: dir > 0 ? 60 : -60 }),
+        center: { opacity: 1, x: 0 },
+        exit: (dir) => ({ opacity: 0, x: dir > 0 ? -60 : 60 }),
     };
 
     return (
@@ -164,7 +170,7 @@ export default function Reviews() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
+                transition={{ duration: 0.5 }}
                 className="text-center mb-12"
             >
                 <h2 className="text-3xl md:text-4xl font-bold text-[#F7C35F] mb-4">
@@ -177,14 +183,13 @@ export default function Reviews() {
 
             {/* Контейнер слайдера */}
             <div className="relative">
-                {/* Кнопки навигации */}
                 {totalPages > 1 && (
                     <>
                         <button
                             onClick={prevPage}
                             className="absolute left-0 top-1/2 -translate-y-1/2 z-10 -translate-x-4 md:-translate-x-12
-                bg-[#F7C35F] rounded-full p-2 md:p-3 shadow-lg transition-all
-                hover:bg-[#e5b44f] hover:scale-110"
+                                bg-[#F7C35F] rounded-full p-2 md:p-3 shadow-lg transition-colors
+                                hover:bg-[#e5b44f] hover:scale-110"
                             aria-label="Предыдущий отзыв"
                         >
                             <ChevronLeft className="w-5 h-5 md:w-6 md:h-6 text-[#2c1810]" />
@@ -193,8 +198,8 @@ export default function Reviews() {
                         <button
                             onClick={nextPage}
                             className="absolute right-0 top-1/2 -translate-y-1/2 z-10 translate-x-4 md:translate-x-12
-                bg-[#F7C35F] rounded-full p-2 md:p-3 shadow-lg transition-all
-                hover:bg-[#e5b44f] hover:scale-110"
+                                bg-[#F7C35F] rounded-full p-2 md:p-3 shadow-lg transition-colors
+                                hover:bg-[#e5b44f] hover:scale-110"
                             aria-label="Следующий отзыв"
                         >
                             <ChevronRight className="w-5 h-5 md:w-6 md:h-6 text-[#2c1810]" />
@@ -202,27 +207,31 @@ export default function Reviews() {
                     </>
                 )}
 
-                {/* Слайдер */}
+                {/* Слайдер — обёрнут в AnimatePresence с mode="wait" */}
                 <div
                     className="overflow-hidden"
                     onTouchStart={handleTouchStart}
                     onTouchEnd={handleTouchEnd}
                 >
-                    <motion.div
-                        key={currentPage}
-                        initial={{ opacity: 0, x: 300 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        exit={{ opacity: 0, x: -300 }}
-                        transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                        className={`grid gap-6 ${itemsPerPage === 1 ? 'grid-cols-1' :
-                            itemsPerPage === 2 ? 'grid-cols-2' :
-                                'grid-cols-3'
-                            }`}
-                    >
-                        {getCurrentPageReviews().map((review) => (
-                            <ReviewCard key={review.id} review={review} />
-                        ))}
-                    </motion.div>
+                    <AnimatePresence mode="wait" custom={direction}>
+                        <motion.div
+                            key={currentPage}
+                            custom={direction}
+                            variants={variants}
+                            initial="enter"
+                            animate="center"
+                            exit="exit"
+                            transition={{ duration: 0.3, ease: 'easeInOut' }}
+                            className={`grid gap-6 ${itemsPerPage === 1 ? 'grid-cols-1' :
+                                    itemsPerPage === 2 ? 'grid-cols-2' :
+                                        'grid-cols-3'
+                                }`}
+                        >
+                            {getCurrentPageReviews().map((review) => (
+                                <ReviewCard key={review.id} review={review} />
+                            ))}
+                        </motion.div>
+                    </AnimatePresence>
                 </div>
 
                 {/* Точки-индикаторы */}
@@ -231,10 +240,10 @@ export default function Reviews() {
                         {[...Array(totalPages)].map((_, i) => (
                             <button
                                 key={i}
-                                onClick={() => setCurrentPage(i)}
+                                onClick={() => goToPage(i)}
                                 className={`h-2 rounded-full transition-all duration-300 ${currentPage === i
-                                    ? 'w-8 bg-[#F7C35F]'
-                                    : 'w-2 bg-[#F7C35F]/30 hover:bg-[#F7C35F]/50'
+                                        ? 'w-8 bg-[#F7C35F]'
+                                        : 'w-2 bg-[#F7C35F]/30 hover:bg-[#F7C35F]/50'
                                     }`}
                                 aria-label={`Страница ${i + 1}`}
                             />
@@ -243,19 +252,22 @@ export default function Reviews() {
                 )}
             </div>
 
-            {/* CTA секция */}
+            {/* CTA */}
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
                 className="text-center mt-12 p-8 bg-gradient-to-r from-[#F7C35F]/10 to-transparent rounded-xl"
             >
                 <p className="text-[#EADCC1] text-lg mb-4">
                     Присоединяйтесь к нашим постоянным клиентам
                 </p>
-                <Link href={"#contact"} className="bg-[#F7C35F] text-[#2c1810] px-8 py-3 rounded-lg font-semibold
-          hover:bg-[#e5b44f] transition-all duration-300 hover:scale-105">
+                <Link
+                    href="#contact"
+                    className="bg-[#F7C35F] text-[#2c1810] px-8 py-3 rounded-lg font-semibold
+                        hover:bg-[#e5b44f] transition-colors duration-300"
+                >
                     Связаться с нами
                 </Link>
             </motion.div>

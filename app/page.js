@@ -24,7 +24,7 @@ export const metadata = {
 
 export default function MainPage() {
   return (
-    <div className="mx-auto container">
+    <div className="mx-auto  container">
       <VisitBlock />
       <Product />
       <Reviews />

@@ -34,7 +34,14 @@ export default function Header() {
                         href={'/podsolnechnik'}
                         className='header_text text-lg md:text-xl font-light text-[#EADCC1] hover:text-yellow-500 transition-colors'
                     >
-                        Семечка подсолнечника
+                        Подсолнечник
+                    </Link>
+                    <span className='text-[#EADCC1]'>|</span>
+                    <Link
+                        href={"/industry"}
+                        className='header_text text-lg md:text-xl font-light text-[#EADCC1] hover:text-yellow-500 transition-colors'
+                    >
+                        Отрасли
                     </Link>
                     <span className='text-[#EADCC1]'>|</span>
                     <Link

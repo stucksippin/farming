@@ -165,7 +165,7 @@ export default function Product() {
           {flaxData.map((product, index) => (
             <motion.div
               key={index}
-              className="flex flex-col items-center bg-gradient-to-b from-[#3d3420] to-transparent p-6 md:p-8 rounded-2xl border border-[#F7C35F]/20 hover:border-[#F7C35F]/40 transition-all duration-300 will-change-transform"
+              className="flex flex-col items-center bg-gradient-to-b from-[#253927] to-transparent p-6 md:p-8 rounded-2xl border border-[#F7C35F]/20 hover:border-[#F7C35F]/40 transition-all duration-300 will-change-transform"
               custom={index}
               initial="hidden"
               whileInView="visible"
@@ -229,7 +229,7 @@ export default function Product() {
           {sunflowerData.map((product, index) => (
             <motion.div
               key={index}
-              className="flex flex-col items-center bg-gradient-to-b from-[#3d3420] to-transparent p-6 md:p-8 rounded-2xl border border-[#F7C35F]/20 hover:border-[#F7C35F]/40 transition-all duration-300 will-change-transform"
+              className="flex flex-col items-center bg-gradient-to-b from-[#253927] to-transparent p-6 md:p-8 rounded-2xl border border-[#F7C35F]/20 hover:border-[#F7C35F]/40 transition-all duration-300 will-change-transform"
               custom={index}
               initial="hidden"
               whileInView="visible"
