@@ -7,6 +7,7 @@ import FloatingContacts from "./components/layout/FloatingContacts";
 import YandexMetrika from "./components/YandexMetrikaInitializer";
 import CookieBanner from "./components/layout/CookieBanner";
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import Head from "next/head";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -23,9 +24,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="ru">
 
-      <head>
-        <link rel="icon" href="https://velikanov-farming.ru/favicon.ico" type="image/x-icon"></link>
-      </head>
+      <Head>
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+      </Head>
 
       <body className={inter.className}>
         <YandexMetrika />
