@@ -2,7 +2,7 @@ export const posts = [
     {
         "slug": "kak-vybrat-sort-pshenicy-dlya-rostovskoy-oblasti",
         "category": "Пшеница",
-        "title": "Как выбрать сорт пшеницы для Ростовской области: урожайность, класс и устойчивость",
+        "title": "Как выбрать сорт пшеницы для Ростовской области",
         "date": "11 февраля 2026",
         "readTime": "11 мин",
         "author": "Николай Великанов",
@@ -145,7 +145,7 @@ export const posts = [
     {
         "slug": "bolezni-i-vrediteli-pshenicy-i-podsolnechnika",
         "category": "Пшеница",
-        "title": "Болезни и вредители пшеницы и подсолнечника: как вовремя поймать проблему и сохранить урожай",
+        "title": "Болезни и вредители пшеницы и подсолнечника",
         "date": "6 февраля 2026",
         "readTime": "9 мин",
         "author": "Николай Великанов",
@@ -699,7 +699,7 @@ export const posts = [
     {
         slug: 'selskoe-hozyaystvo-2030-tehnologii-budushchego',
         category: 'Агротехника',
-        title: 'Сельское хозяйство 2030: какие технологии останутся, а какие исчезнут',
+        title: 'Сельское хозяйство 2030: какие технологии останутся',
         date: '12 февраля 2026',
         readTime: '10 мин',
         author: 'Николай Великанов',
@@ -839,7 +839,7 @@ export const posts = [
     {
         "slug": "intensivnaya-tehnologiya-podsolnechnika-okupaemost",
         "category": "Подсолнечник",
-        "title": "Интенсивная технология выращивания подсолнечника: окупаемость инвестиций",
+        "title": "Интенсивная технология выращивания подсолнечника: окупаемость",
         "date": "16 февраля 2026",
         "readTime": "7 мин",
         "author": "Николай Великанов",
@@ -1232,7 +1232,7 @@ export const posts = [
     {
         slug: 'gps-navigaciya-i-avtopilot-ekonomiya-topliva-i-udobreniy',
         category: 'Агротехника',
-        title: 'GPS-навигация и автопилот: как точное земледелие экономит топливо и удобрения',
+        title: 'GPS-навигация и автопилот: экономия топлива и удобрений',
         date: '18 февраля 2025',
         readTime: '7 мин',
         author: 'Николай Великанов',
@@ -1872,7 +1872,7 @@ export const posts = [
     {
         "slug": "podkormka-pshenitsy-po-fazam-razvitiya",
         "category": "Пшеница",
-        "title": "Подкормка пшеницы по фазам развития: дозировки и сроки внесения удобрений",
+        "title": "Подкормка пшеницы по фазам: дозировки и сроки внесения",
         "date": "04 марта 2025",
         "readTime": "8 мин",
         "author": "Николай Великанов",
@@ -2057,7 +2057,7 @@ export const posts = [
     {
         "slug": "sorta-lna-s-vysokim-soderzhaniem-masla",
         "category": "Лен",
-        "title": "Сорта льна масличного с высоким содержанием масла: на что ориентироваться при выборе",
+        "title": "Сорта льна масличного с высоким содержанием масла",
         "date": "16 марта 2025",
         "readTime": "7 мин",
         "author": "Николай Великанов",
