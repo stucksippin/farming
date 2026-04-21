@@ -192,7 +192,7 @@ export default function SunflowerProductComp() {
                     {/* Product Info */}
                     <div>
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#F7C35F] mb-6 leading-tight">
-                            Подсолнечник масличный оптом
+                            Подсолнечник масличный оптом в Ростовской области
                         </h1>
 
                         <div className="bg-gradient-to-r from-[#F7C35F]/10 to-transparent rounded-xl p-6 mb-6 border-l-4 border-[#F7C35F]">

@@ -213,7 +213,7 @@ export default function WheatProductComp() {
                     {/* Product Info */}
                     <div>
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#F7C35F] mb-6 leading-tight">
-                            Пшеница оптом
+                            Пшеница оптом в Ростовской области
                         </h1>
 
 
