@@ -12,6 +12,9 @@ import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
+  verification: {
+    google: "OLOh4cInARnPvp7hmw3iFil-N0374cGCM-8rmDGKIlo",
+  },
   robots: {
     index: true,
     follow: true,
